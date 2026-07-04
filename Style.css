@@ -5,8 +5,11 @@
 }
 
 body {
-    background-image: url('tlo-wszechswiata-blekitnego-nieba_1017-3407.jpg');
-    background-size: cover;
+    
+      
+    background-image: url('tlo-wszechswiata-blekitnego-nieba_1017-3407.jpg/tlo-wszechswiata-blekitnego-nieba_1017-3407.jpg'); 
+    background-size:    ;
+    cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
