@@ -1,0 +1,44 @@
+/* 1. Reset podstawowych marginesów dla całej strony */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Główne ustawienia tła i czcionki na stronie */
+body {
+    /* Ustawienie Twojego obrazka jako tła */
+    background-image: url('tlo-wszechswiata-blekitnego-nieba_1017-3407.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Wygląd tekstu i domyślna ciemna stylistyka pasująca do kosmosu */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background-color: #060a17; /* Kolor awaryjny, zanim załaduje się obrazek */
+    
+    /* Układ, który automatycznie idealnie wyśrodkuje Spotify na ekranie */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 3. Styl dla kontenera, w którym trzymasz Spotify (opcjonalnie) */
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4); /* Półprzezroczyste czarne tło pod Spotify */
+    border-radius: 12px;           /* Zaokrąglone rogi ramki */
+    backdrop-filter: blur(10px);   /* Modny efekt rozmycia tła za ramką */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); /* Delikatny cień */
+}
+
+/* 4. Zabezpieczenie, aby odtwarzacz Spotify dobrze wyświetlał się na telefonach */
+iframe {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
