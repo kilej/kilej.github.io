@@ -4,16 +4,17 @@
 @import "{{ site.theme }}";
 
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background: radial-gradient(circle at center, #1b1236 0%, #0b071a 60%, #000000 100%) !important;
+  color: #ffffff !important;
+  min-height: 100vh;
 }
+---
+---
 
-/* Opcjonalnie: Jeśli używasz motywów Jekyll, poniższe klasy pomogą zmienić tło nagłówków i stopek */
-.site-header, .site-footer {
-  background-color: #000000;
+@import "{{ site.theme }}";
+
+body {
+  background: radial-gradient(circle at center, #1b1236 0%, #0b071a 60%, #000000 100%) !important;
+  color: #ffffff !important;
+  min-height: 100vh;
 }
-
-.page-content, h1, h2, h3, p, a {
-  color: #ffffff;
-}
-
