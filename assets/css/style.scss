@@ -1,21 +1,6 @@
-
-    body {
-    background: linear-gradient(135deg, #1e1e2f, #252542);
-    color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
-}
----
----
-@import "{{ site.theme }}";
-
-body {
-    background-image: url('/tlo.jpg'); /*
-    background-size: cover;
-}
-
-    background-image: url("../../tlo.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.spotify-widget-container {
+  background: rgba(0, 0, 0, 0.6); /* Czarne tło z 60% przezroczystości */
+  backdrop-filter: blur(10px);    /* Rozmycie tła pod spodem */
+  border-radius: 12px;            /* Zaokrąglone rogi */
+  padding: 20px;
 }
