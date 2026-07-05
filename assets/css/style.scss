@@ -1,20 +1,23 @@
----
----
-
-@import "{{ site.theme }}";
-
-body {
-  background: radial-gradient(circle at center, #1b1236 0%, #0b071a 60%, #000000 100%) !important;
-  color: #ffffff !important;
-  min-height: 100vh;
+css:root {
+  --nazwa-palety: "Moje Kolory";
+  --kolor-glowny: #3498db;
+  --kolor-drugorzedny: #2ecc71;
+  --kolor-akcent: #e74c3c;
+  --kolor-tlo: #f4f4f4;
+  --kolor-tekst: #2c3e50;
 }
----
----
 
-@import "{{ site.theme }}";
-
+/* Przykład użycia kolorów na stronie: */
 body {
-  background: radial-gradient(circle at center, #1b1236 0%, #0b071a 60%, #000000 100%) !important;
-  color: #ffffff !important;
-  min-height: 100vh;
+  background-color: var(--kolor-tlo);
+  color: var(--kolor-tekst);
+}
+
+h1 {
+  color: var(--kolor-glowny);
+}
+
+button {
+  background-color: var(--kolor-akcent);
+  color: #ffffff;
 }
