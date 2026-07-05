@@ -1,4 +1,10 @@
-body {
+
+    body {
+    background: linear-gradient(135deg, #1e1e2f, #252542);
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
     background-image: url("../../tlo.jpg");
     background-size: cover;
     background-position: center;
