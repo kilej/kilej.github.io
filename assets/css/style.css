@@ -4,6 +4,14 @@
     color: #ffffff;
     font-family: 'Segoe UI', sans-serif;
 }
+---
+---
+@import "{{ site.theme }}";
+
+body {
+    background-image: url('/tlo.jpg'); /*
+    background-size: cover;
+}
 
     background-image: url("../../tlo.jpg");
     background-size: cover;
