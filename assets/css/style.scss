@@ -1,35 +1,7 @@
-css:root {
-  --nazwa-palety: "Moje Kolory";
-  --kolor-glowny: #3498db;
-  --kolor-drugorzedny: #2ecc71;
-  --kolor-akcent: #e74c3c;
-  --kolor-tlo: #f4f4f4;
-  --kolor-tekst: #2c3e50;
-}
-
-
-h1 {
-  color: var(--kolor-glowny);
-}
-/* 1. Definiujemy kolory */
-:root {
-  --kolor-glowny: #3498db;
-  --kolor-drugorzedny: #2ecc71;
-  --kolor-akcent: #e74c3c;
-  --kolor-tlo: #f4f4f4;
-  --kolor-tekst: #2c3e50;
-}
-
-/* 2. Używamy ich (tu zaczynają wyskakiwać!) */
 body {
-  background-color: var(--kolor-tlo);   /* Tło strony zmieni się na jasnoszare */
-  color: var(--kolor-tekst);            /* Tekst zmieni się na ciemny granat */
-}
-
-h1 {
-  color: var(--kolor-glowny);           /* Główny nagłówek będzie niebieski */
-}
-
-a {
-  color: var(--kolor-drugorzedny);      /* Linki będą zielone */
+  background-image: url('tlo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
