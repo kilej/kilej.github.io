@@ -31,7 +31,6 @@ Allow: /
 Allow: /sitemap.xml
 
 User-agent: Googlebot
-...
 
 User-agent: *
 Disallow: /_layouts/
