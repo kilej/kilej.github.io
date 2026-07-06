@@ -1,4 +1,5 @@
-name: Sprawdzanie formatowania
+
+name: Automatyczna naprawa formatowania
 on: [push, pull_request]
 
 jobs:
@@ -8,7 +9,10 @@ jobs:
       - name: Pobierz kod
         uses: actions/checkout@v4
 
-      - name: Uruchom Prettier
+      - name: Uruchom Prettier i napraw błędy
         uses: crey08/prettier-action@v4.3
         with:
-          prettier_options: --check index.html
+          # Ta opcja sprawi, że Prettier sam poprawi pliki
+          prettier_options: --write **/*.html
+          # Automatycznie zapisz poprawiony kod w repozytorium
+          commit_message: "Automatyczne poprawienie błędów przez Prettier"
