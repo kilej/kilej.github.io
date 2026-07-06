@@ -1,0 +1,15 @@
+{
+  "$schema": "https://biomejs.dev",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "enabled": true
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true
+  }
+}
+
