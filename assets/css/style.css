@@ -1,25 +1,25 @@
 .spotify-widget-container {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 20px;
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(10px);
+	border-radius: 12px;
+	padding: 20px;
 }
 
 body {
-    background-image: url('../img/tlo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    background-color: #121212 !important;
-    color: #ffffff;
+	background-image: url("../img/tlo.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	background-color: #121212;
+	color: #ffffff;
 }
 ul li {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 ul li a {
-    display: inline-block;
-    padding: 10px 0;
+	display: inline-block;
+	padding: 10px 0;
 }
