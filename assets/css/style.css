@@ -16,3 +16,10 @@ body {
     background-color: #121212 !important;
     color: #ffffff;
 }
+ul li {
+    margin-bottom: 15px;
+}
+ul li a {
+    display: inline-block;
+    padding: 10px 0;
+}
