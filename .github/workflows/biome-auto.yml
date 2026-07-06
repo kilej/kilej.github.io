@@ -8,7 +8,7 @@ jobs:
   biome-autofix:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # To pozwala akcji poprawiać Twoje pliki
+      contents: write
 
     steps:
       - name: Pobierz kod z repozytorium
@@ -19,7 +19,7 @@ jobs:
         with:
           version: latest
 
-      - name: Automatyczna naprawa plików (HTML, JSON i inne)
+      - name: Automatyczna naprawa plikow
         run: |
           biome format --write .
           biome lint --write --unsafe .
