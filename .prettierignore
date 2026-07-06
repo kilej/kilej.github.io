@@ -3,4 +3,17 @@ node_modules
 dist
 build
 package-lock.json
+ # Ignoruj foldery projektowe i systemowe
+node_modules/
+dist/
+build/
+
+# Ignoruj pliki obsługiwane przez Biome (blokada konfliktów)
+**/src/js/**
+**/*.ts
+**/*.tsx
+**/*.js
+**/*.jsx
+
+
 
