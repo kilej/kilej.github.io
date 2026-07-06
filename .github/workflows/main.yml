@@ -12,7 +12,6 @@ jobs:
       - name: Uruchom Prettier i napraw błędy
         uses: crey08/prettier-action@v4.3
         with:
-          # Ta opcja sprawi, że Prettier sam poprawi pliki
-          prettier_options: --write **/*.html
-          # Automatycznie zapisz poprawiony kod w repozytorium
+          # Sprawdza i naprawia tylko plik index.html, ignorując resztę
+          prettier_options: --write index.html
           commit_message: "Automatyczne poprawienie błędów przez Prettier"
