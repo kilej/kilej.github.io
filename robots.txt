@@ -1,14 +1,26 @@
-# Globalne zasady dla Google i dobrych botów
+User-agent: bingbot
+Allow: /
+
 User-agent: *
 Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 Disallow: /_layouts/
 Disallow: /_includes/
 
-
-# Blokada botów obciążających serwer
 User-agent: AhrefsBot
-Disallow: /
+Allow: /
 
-# Wskazanie mapy strony (zostaw na samym dole)
+User-agent: Google-InspectionTool
+Allow: /
+
 Sitemap: https://kilej.github.io/sitemap.xml
 
