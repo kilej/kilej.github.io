@@ -12,5 +12,6 @@ jobs:
         uses: crey08/prettier-action@v4.3
         with:
           # Sprawdza i naprawia tylko plik index.html, ignorując resztę
-          prettier_options: --write index.html
+            prettier_options: --write "**/*.{html,json,md,css}" --ignore-path .biomeignore
+
           commit_message: "Automatyczne poprawienie błędów przez Prettier"
