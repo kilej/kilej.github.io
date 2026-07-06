@@ -4,12 +4,6 @@ Allow: /
 Disallow: /_layouts/
 Disallow: /_includes/
 
-# Blokada zbierania danych przez AI
-User-agent: GPTBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
 
 # Blokada botów obciążających serwer
 User-agent: AhrefsBot
