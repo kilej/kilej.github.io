@@ -1,0 +1,30 @@
+name: Biome Automatic Formatter
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  biome-autofix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # To pozwala akcji poprawiać Twoje pliki
+
+    steps:
+      - name: Pobierz kod z repozytorium
+        uses: actions/checkout@v4
+
+      - name: Uruchom Biome
+        uses: biomejs/setup-biome@v2
+        with:
+          version: latest
+
+      - name: Automatyczna naprawa plików (HTML, JSON i inne)
+        run: |
+          biome format --write .
+          biome lint --write --unsafe .
+
+      - name: Automatyczny zapis poprawek do repozytorium
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automatyczna naprawa kodu przez Biome"
