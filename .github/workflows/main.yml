@@ -1,0 +1,14 @@
+name: Sprawdzanie formatowania
+on: [push, pull_request]
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v4
+
+      - name: Uruchom Prettier
+        uses: crey08/prettier-action@v4.3
+        with:
+          prettier_options: --check index.html
