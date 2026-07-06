@@ -13,8 +13,11 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Disallow: /_layouts/
-Disallow: /_includes/
+User-agent: Google-Extended
+Allow: /
+
+User-agent: *
+Allow: /assets/
 
 User-agent: AhrefsBot
 Allow: /
@@ -23,4 +26,12 @@ User-agent: Google-InspectionTool
 Allow: /
 
 Sitemap: https://kilej.github.io/sitemap.xml
+
+User-agent: *
+Disallow: /_layouts/
+Disallow: /_includes/
+Disallow: /_site/
+Disallow: /_posts/
+Disallow: /_drafts/
+
 
