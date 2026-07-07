@@ -1,16 +1,15 @@
-name: Bezpieczna Codzienna Naprawa Plików
+name: Wymuszona Codzienna Naprawa Plików
 on:
   schedule:
     # 18:00 czasu polskiego (w czasie letnim to 16:00 UTC)
-    - cron: '0 16 * * *' 
+    - cron: '0 16 * * *'
   workflow_dispatch: # Pozwala na ręczne uruchomienie w dowolnym momencie
 
 jobs:
-  safe-fix:
+  force-fix:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write # Wymagane, aby robot mógł utworzyć Pull Request
     steps:
       - name: Pobranie kodu z repozytorium
         uses: actions/checkout@v4
@@ -18,21 +17,14 @@ jobs:
       - name: Konfiguracja Biome
         uses: biomejs/setup-biome@v2
 
-      - name: Próba naprawy index.html oraz biome.json
-        # Naprawia błędy i formatowanie, ale ignoruje te, które mogłyby zepsuć strukturę
+      - name: Wymuszona próba naprawy kodu
         run: |
-          biome check --write --no-errors-on-unmatched index.html biome.json || true
+          biome check --write index.html biome.json || true
 
-      - name: Utworzenie bezpiecznej propozycji zmian (Pull Request)
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "🤖 bot: automatyczna naprawa kodu"
-          branch: bot-naprawa-kodu
-          title: "🤖 Propozycja automatycznej naprawy index.html i biome.json"
-          body: |
-            Cześć! Przejrzałem Twój kod i przygotowałem automatyczne poprawki formatowania oraz błędów w plikach `index.html` i `biome.json`.
-            
-            Przejrzyj zakładce **Files changed** poniżej, aby upewnić się, że wszystko wygląda dobrze. Jeśli tak, kliknij **Merge pull request**, aby wprowadzić zmiany na stronę!
-          delete-branch: true
-
+      - name: Natychmiastowy zapis zmian (Wymuszony Push)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          git add index.html biome.json
+          git commit -m "bot: wymuszona automatyczna naprawa kodu" || echo "Brak zmian do zapisania"
+          git push
