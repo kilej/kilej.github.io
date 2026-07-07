@@ -21,9 +21,7 @@ jobs:
 
       - name: Automatyczna naprawa plikow
         run: |
-          biome format --write .
-          biome lint --write --unsafe .
-
+          biome check --write --unsafe .
       - name: Automatyczny zapis poprawek do repozytorium
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
