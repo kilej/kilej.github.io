@@ -1,17 +1,1 @@
-name: Automatyczna naprawa formatowania
-on: [push, pull_request]
 
-jobs:
-  prettier:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Pobierz kod
-        uses: actions/checkout@v4
-
-      - name: Uruchom Prettier i napraw błędy
-        uses: crey08/prettier-action@v4.3
-        with:
-          # Sprawdza i naprawia tylko plik index.html, ignorując resztę
-            prettier_options: --write "**/*.{html,json,md,css}" --ignore-path .biomeignore
-
-          commit_message: "Automatyczne poprawienie błędów przez Prettier"
