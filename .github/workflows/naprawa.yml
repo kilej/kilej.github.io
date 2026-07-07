@@ -14,12 +14,20 @@ jobs:
       - name: Pobranie kodu z repozytorium
         uses: actions/checkout@v4
 
+      
       - name: Konfiguracja Biome
         uses: biomejs/setup-biome@v2
+        with:
+          version: 2.0.0
 
       - name: Wymuszona próba naprawy kodu
         run: |
-          biome check --write index.html biome.json || true
+          biome check --write . || true
+
+      - name: Wymuszona próba naprawy kodu
+        run: |
+            biome check --write . || true
+
 
       - name: Natychmiastowy zapis zmian (Wymuszony Push)
         run: |
