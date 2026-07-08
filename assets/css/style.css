@@ -15,11 +15,22 @@ body {
   padding: 0;
   background-color: #121212;
   color: #ffffff;
-}
-ul li {
-  margin-bottom: 15px;
+
+ul li a {
+    display: inline-block;
+    padding: 15px 0;
+    color: #00FFCC; 
 }
 ul li a {
   display: inline-block;
   padding: 10px 0;
+}
+.biografia-kontener {
+    background: rgba(0, 0, 0, 0.65); 
+    backdrop-filter: blur(8px);       
+    -webkit-backdrop-filter: blur(8px); 
+    padding: 25px;                   
+    border-radius: 12px;             
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    margin-bottom: 30px;            
 }
