@@ -45,3 +45,7 @@ ul li a {
     padding: 20px;
     color: white;
 }
+.biografia-kontener h2 {
+    font-style: italic;
+    color: #1e90ff;
+}
