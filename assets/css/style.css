@@ -47,6 +47,6 @@ ul li a {
 }
 h2 {
     font-style: italic;
-    color: #00f0ff;
-    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    color: #ffffff;
+    text-shadow: 0 0 12px #1e90ff, 0 0 5px #000000;
 }
