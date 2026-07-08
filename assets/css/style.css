@@ -51,7 +51,10 @@ h2 {
     text-shadow: 0 0 12px #1e90ff, 0 0 5px #000000;
 }
   h1 {
-    font-style: italic;
-    color: #ffffff;
-    text-shadow: 0 0 12px #1e90ff, 0 0 5px #000000;
-  }
+    font-family: 'Cinzel', serif; 
+    font-weight: 700;             
+    letter-spacing: 4px;          
+    text-transform: uppercase;    
+    text-align: center;           
+    line-height: 1.4;           
+}
