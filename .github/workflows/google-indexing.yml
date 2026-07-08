@@ -1,0 +1,27 @@
+name: Automatyczne Indeksowanie Google
+
+on:
+  push:
+    branches:
+      - main # Uruchamia bota po każdym wrzuceniu zmian na gałąź główną
+  schedule:
+    - cron: '0 0 * * *' # Dodatkowo uruchamia bota automatycznie raz na dobę o północy
+
+jobs:
+  google-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobranie kodu repozytorium
+        uses: actions/checkout@v4
+
+      - name: Konfiguracja Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Przygotowanie klucza autoryzacji
+        run: echo '${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}' > klucz-google.json
+
+      - name: Uruchomienie bota indeksującego
+        run: npx google-indexing-script
+
