@@ -36,14 +36,13 @@ ul li a {
     margin-bottom: 30px;
 }
 .biografia-kontener {
-    background: #121212;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    padding: 25px;
-    border-radius: 0;
-    border: none;
-    max-width: 100%;
-    margin-bottom: 30px;
+    background: #000000;
+    box-shadow: 0 0 60px 40px #121212;
+    padding: 30px 20px;
+    margin: 0 auto 40px auto;
+    max-width: 92%;
+    border-radius: 16px;
+    box-sizing: border-box;
 }
 
 
