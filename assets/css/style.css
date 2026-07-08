@@ -26,14 +26,24 @@ ul li a {
   padding: 10px 0;
 }
 .biografia-kontener {
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: #121212;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    max-width: 90%;
-    margin: 0 auto 30px auto;
-    box-sizing: border-box;
+    border-radius: 0;
+    border: none;
+    max-width: 100%;
+    margin-bottom: 30px;
 }
+.biografia-kontener {
+    background: #121212;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: 25px;
+    border-radius: 0;
+    border: none;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
 
