@@ -26,11 +26,14 @@ ul li a {
   padding: 10px 0;
 }
 .biografia-kontener {
-    background: rgba(0, 0, 0, 0.65); 
-    backdrop-filter: blur(8px);       
-    -webkit-backdrop-filter: blur(8px); 
-    padding: 25px;                   
-    border-radius: 12px;             
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    margin-bottom: 30px;            
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 90%;
+    margin: 0 auto 30px auto;
+    box-sizing: border-box;
 }
+
