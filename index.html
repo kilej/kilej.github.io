@@ -139,17 +139,39 @@ style="width: 100%; max-width: 250px; height: auto; flex-shrink: 0; scroll-snap-
 </div>
 <div id="lightboxOverlay" onclick="closeLightbox(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 99999; justify-content: center; align-items: center; cursor: pointer;">
 <span style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">×</span>
-<img id="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp" alt="Podgląd, Kiłej" style="max-width: 90%; max-height: 90%; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); cursor: default;">
-</div>
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp" 
+     alt="Podgląd Kilej" 
+     style="max-width: 92%; max-height: 90%; border-radius: 4px; cursor: pointer;" 
+     onclick="openLightbox(this.src)">
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif" 
+     alt="Podgląd Kilej" 
+     style="max-width: 92%; max-height: 90%; border-radius: 4px; cursor: pointer;" 
+     onclick="openLightbox(this.src)">
 <div id="lightboxOverlay" onclick="closeLightbox(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 99999; justify-content: center; align-items: center; cursor: pointer;">
-<span style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">×</span>
+    <span style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">&times;</span>
+    <img id="lightboxImg" src="" alt="Powiększenie" style="max-width: 90%; max-height: 90%; border-radius: 4px; cursor: default;">
 </div>
-<img id="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif"  alt="Podgląd, Kiłej" style="max-width: 90%; max-height: 90%; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); cursor: default;">
-</div>
-<div id="lightboxOverlay" onclick="closeLightbox(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 99999; justify-content: center; align-items: center; cursor: pointer;">
-<span style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">×</span>
-<div/>   
 <script>
+const overlay = document.getElementById('lightboxOverlay');
+const lightboxImg = document.getElementById('lightboxImg'); // Poprawione ID
+function openLightbox(src) {
+    lightboxImg.src = src;
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox(event) {
+    // Zamknij tylko jeśli kliknięto tło lub krzyżyk, a nie samo zdjęcie
+    if (event && event.target === lightboxImg) return;
+    overlay.style.display = 'none';
+    lightboxImg.src = '';
+    document.body.style.overflow = 'auto';
+}
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' || event.keyCode === 27) {
+        closeLightbox();
+    }
+});
+</script>
 const overlay = document.getElementById('lightboxOverlay');
             const lightboxImg = document.getElementById('lightboxImage1');
             function openLightbox(src) {
@@ -169,7 +191,6 @@ const overlay = document.getElementById('lightboxOverlay');
                 }
             });
         </script>
-
         <div style="display: flex; gap: 20px; width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 15px; box-sizing: border-box; justify-content: center;">
             <iframe style="flex: 0 0 250px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: center;" 
                 src="https://open.spotify.com/embed/artist/4Uua4f1355hQp1duls7kKK"
