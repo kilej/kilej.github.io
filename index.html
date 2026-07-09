@@ -157,17 +157,18 @@ document.addEventListener('keydown', function(event) {
 <div class="galeria">
    .galeria {
     display: flex;
-    flex-direction: column;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    scrollbar-width: none;
     align-items: center;
     gap: 15px;
     padding: 10px;
-    width: 48%;
+    width: 35%;
     box-sizing: border-box;
 }
 
 .galeria img {
-    width: 48%; /* Zdjęcia zajmują prawie całą szerokość ekranu telefonu */
-    height: auto; /* Zachowanie oryginalnych proporcji zdjęć */
+    width: 35%; /* Zdjęcia zajmują prawie całą szerokość ekranu telefonu */
     border-radius: 12px;
     object-fit: contain;
 }
