@@ -89,10 +89,9 @@ h2 {
   font-weight: 100;     
   letter-spacing: 1px;   
   text-transform: uppercase; 
-    @media (min-width: 769px) {
-    .maly-tekst {
-        display: none !important;
-    }
+    @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), 
+       (min-width: 768px) and (min-resolution: 192dpi) {
+  .maly-tekst {
+    display: none !important;
+  }
 }
-
-
