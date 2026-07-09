@@ -84,3 +84,10 @@ h2 {
   object-fit: cover;   
   height: 400px;     
 }
+  .maly-tekst {
+  font-size: 10px;      
+  font-weight: 100;     
+  letter-spacing: 1px;   
+  text-transform: uppercase; 
+}
+
