@@ -155,41 +155,35 @@ style="width: 100%; max-width: 250px; height: auto; flex-shrink: 0; scroll-snap-
 <script>
 const overlay = document.getElementById('lightboxOverlay');
             const lightboxImg = document.getElementById('lightboxImage1');
-
             function openLightbox(src) {
                 lightboxImg.src = src;
                 overlay.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
             }
-
             function closeLightbox(event) {
                 if (event && event.target === lightboxImg) return;
                 overlay.style.display = 'none';
                 lightboxImg.src = '';
                 document.body.style.overflow = 'auto';
             }
-
             document.addEventListener('keydown', function(event) {
                 if (event.key === 'Escape' || event.keyCode === 27) {
                     closeLightbox();
                 }
             });
-        <div style="display: flex; gap: 20px;">
-            <iframe style="flex: 0 0 250px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: start;" 
-                    src="https://open.spotify.com/embed/artist/4Uua4f1355hQp1duls7kKK" 
-                    title="Odtwarzacz Spotify - Kilej (Daniel Kilarski)" 
-                    allowfullscreen
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture;
-                    loading="lazy">
-            </iframe>
-            <iframe style="flex: 0 0 250px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: start;" 
-                    src="https://www.youtube.com/embed/hKIkXnEZhlc" 
-                    title="YouTube video player" 
-                    allowfullscreen
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pict
-                    loading="lazy">
-            </iframe>
-        </div>
-    </main>
-</body>
-</html>
+        <div style="display: flex; gap: 20px; width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 15px; box-sizing: border-box; justify-content: center;">
+    <iframe style="flex: 0 0 250px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: center;"
+        src="https://open.spotify.com/embed/artist/4Uua4f1355hQp1duls7kKK"
+        title="Odtwarzacz Spotify - Kiłej (Daniel Kilarski)"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+    <iframe style="flex: 0 0 380px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: center;"
+        src="https://www.youtube.com/embed/hKIkXnEZhlc"
+        title="YouTube video player"
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        loading="lazy">
+    </iframe>
+</div>
