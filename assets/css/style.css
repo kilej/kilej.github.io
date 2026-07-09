@@ -68,18 +68,18 @@ h2 {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 10px;
-  width: 50%;
+  width: 100%;
 }
 .slider {
   display: flex;       
   overflow-x: auto; 
   scroll-snap-type: x mandatory;
   gap: 10px;             
-  width: 50%;        
+  width: 100%;        
 }
 
 .slider img {
-  flex: 0 0 90%;       
+  flex: 0 0 100%;       
   scroll-snap-align: start;
   object-fit: cover;   
   height: 400px;     
