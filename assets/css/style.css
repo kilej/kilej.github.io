@@ -62,4 +62,25 @@ h2 {
     word-spacing: 2px;        
     padding: 0 10px;         
 }
+  <style>
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  width: 100%;
+}
+.slider {
+  display: flex;       
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory;
+  gap: 10px;             
+  width: 100%;        
+}
 
+.slider img {
+  flex: 0 0 100%;       
+  scroll-snap-align: start;
+  object-fit: cover;   
+  height: 400px;     
+}
