@@ -128,8 +128,74 @@
               <h4 style="text-align: center; margin-right: 8%;"> ☆☆☆☆☆ </h4>
         <h4  style="margin-left: 5%;">  — Nie zawsze było lekko —   </h4>
     </body>
-<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp" alt="Raper Kiłej na zdjęciu, nie zawsze było lekko. Polski podziemny raper, zdjecie Kiłeja w Berlinie, " title="Raper Kiłej, nie zawsze było lekko w życiu" width="100%" style="max-width: 250px; height: auto;">
-<div style="display: flex; gap: 20px; overflow-x: auto; padding: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+<!-- Kontener przesuwanego slidera -->
+<div style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; max-width: 350px; margin: 0 auto; padding: 10px; -webkit-overflow-scrolling: touch;">
+<!-- Pierwsze zdjęcie -->
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp"
+alt="Raper Kiłej na zdjęciu"
+title="Raper Kiłej, nie zawsze było lekko w życiu"
+onclick="openLightbox(this.src)"
+style="width: 100%; max-width: 350px; height: auto; flex-shrink: 0; scroll-snap-align: start; border-radius: 8px; cursor: pointer;">
+<!-- Drugie zdjęcie (Zaktualizowany link z Twojego repozytorium GitHub) -->
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif"
+alt="Raper Kiłej w Berlinie w pracy"
+onclick="openLightbox(this.src)"
+style="width: 100%; max-width: 350px; height: auto; flex-shrink: 0; scroll-snap-align: start; border-radius: 8px; cursor: pointer;">
+</div>
+<!-- Nowoczesne okno podglądu (Lightbox) -->
+<div id="lightboxOverlay" onclick="closeLightbox(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 99999; justify-content: center; align-items: center; cursor: pointer;">
+<!-- Przycisk X do zamykania -->
+<span style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">×</span>
+<!-- Powiększone zdjęcie -->
+<img id="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp" src="" alt="Podgląd, Kiłej" style="max-width: 90%; max-height: 90%; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); cursor: default;">
+</div>
+</div>
+<!-- Nowoczesne okno podglądu (Lightbox) -->
+<div id="lightboxOverlay" onclick="closeLightbox(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 99999; justify-content: center; align-items: center; cursor: pointer;">
+<!-- Przycisk X do zamykania -->
+<span style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">×</span>
+<!-- Powiększone zdjęcie -->
+<img id="    </div>
+<!-- Powiększone zdjęcie -->
+<img id="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif" src="" alt="Podgląd, Kiłej" style="max-width: 90%; max-height: 90%; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); cursor: default;">
+</div>
+</div>
+
+<!-- Nowoczesne okno podglądu (Lightbox) -->
+<div id="lightboxOverlay" onclick="closeLightbox(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 99999; justify-content: center; align-items: center; cursor: pointer;">
+<!-- Przycisk X do zamykania -->
+<span style="position: absolute; top: 20px; right: 25px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">×</span>
+<!-- Powiększone zdjęcie -->
+<img id="    </div>
+
+
+
+<!-- Skrypt obsługujący zamykanie i otwieranie -->
+<script>
+const overlay = document.getElementById('lightboxOverlay');
+const lightboxImg = document.getElementById('lightboxImage');
+
+function openLightbox(src) {
+lightboxImg.src = src;
+overlay.style.display = 'flex';
+document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(event) {
+if (event && event.target === lightboxImg) return;
+overlay.style.display = 'none';
+lightboxImg.src = '';
+document.body.style.overflow = 'auto';
+}
+
+document.addEventListener('keydown', function(event) {
+if (event.key === 'Escape' || event.keyCode === 27) {
+closeLightbox();
+}
+});
+</script>
+
+
 
 <iframe style="flex: 0 0 380px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: start;"
 src="https://open.spotify.com/embed/artist/4Uua4f1355hQp1duls7kKK"
