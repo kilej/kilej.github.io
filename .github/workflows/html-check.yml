@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   htmlhint:
     runs-on: ubuntu-latest
-        steps:
+    steps:
       - name: Pobierz kod z repozytorium
         uses: actions/checkout@v4
 
@@ -13,3 +13,4 @@ jobs:
         uses: htmlhint/htmlhint-action@v2
         with:
           html_path: 'index.html'
+
