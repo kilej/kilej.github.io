@@ -124,7 +124,119 @@
         <h4 style="margin-left: 22%;"> Prywatne Kiłeja:</h4> 
               <h4 style="text-align: center; margin-right: 8%;"> ☆☆☆☆☆ </h4>
         <h4  style="margin-left: 5%;">  — Nie zawsze było lekko —   </h4>
-<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp" alt="Raper Kiłej na zdjęciu, nie zawsze było lekko. Polski podziemny raper, zdjecie Kiłeja w Berlinie, " title="Raper Kiłej, nie zawsze było lekko w życiu" width="100%" style="max-width: 250px; height: auto;">
+<div class="galeria-kontener">
+<div class="galeria-element">
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp"
+alt="Miniatura 1"
+class="foto-miniatura"
+onclick="document.getElementById('podgladObrazka1').showModal()">
+</div>
+<div class="galeria-element">
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif"
+alt="Miniatura 2"
+class="foto-miniatura"
+onclick="document.getElementById('podgladObrazka2').showModal()">
+</div>
+</div>
+<dialog id="podgladObrazka1" class="foto-okno" onclick="if(event.target === this || event.target.tagName === 'IMG') this.close()">
+<button class="foto-zamknij" onclick="document.getElementById('podgladObrazka1').close()">✕</button>
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp" alt="Duże zdjęcie 1">
+</dialog>
+<dialog id="podgladObrazka2" class="foto-okno" onclick="if(event.target === this || event.target.tagName === 'IMG') this.close()">
+<button class="foto-zamknij" onclick="document.getElementById('podgladObrazka2').close()">✕</button>
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif" alt="Duże zdjęcie 2">
+</dialog>
+<style>
+.galeria-kontener {
+display: flex;
+gap: 20px; /* 
+width: 100%;
+max-width: 1200px; / 
+margin: 0 auto;
+padding: 10px;
+box-sizing: border-box;
+}
+.galeria-element {
+flex: 1; /* 
+}
+.foto-miniatura {
+width: 100%; / 
+height: auto;
+display: block;
+border-radius: 12px;
+cursor: pointer;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.foto-miniatura:hover {
+transform: scale(1.02);
+box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+@media (max-width: 768px) {
+.galeria-kontener {
+overflow-x: auto; / 
+scroll-snap-type: x mandatory; /    
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch; /   
+gap: 10px;
+}
+
+.galeria-element {
+flex: 0 0 90%; /* 
+scroll-snap-align: center; / 
+}
+}
+*/
+.foto-okno {
+border: none;
+border-radius: 12px;
+padding: 0;
+max-width: 85vw;
+max-height: 85vh;
+box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+background: transparent;
+overflow: visible;
+}
+
+.foto-okno img {
+max-width: 100%;
+max-height: 85vh;
+display: block;
+border-radius: 12px;
+cursor: pointer;
+}
+
+.foto-zamknij {
+position: absolute;
+top: -15px;
+right: -15px;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+border: none;
+background: #ff4d4d;
+color: white;
+font-weight: bold;
+font-size: 16px;
+cursor: pointer;
+box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 10;
+transition: background 0.2s;
+}
+
+.foto-zamknij:hover {
+background: #cc0000;
+}
+
+.foto-okno::backdrop {
+background: rgba(0, 0, 0, 0.75);
+backdrop-filter: blur(4px);
+cursor: pointer;
+}
+</style>
 </ul>
 <div style="display: flex; gap: 20px; overflow-x: auto; padding: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
 
