@@ -5,7 +5,6 @@ Disallow: /_includes/
 Disallow: /_site/
 Disallow: /_posts/
 Disallow: /_drafts/
-
 Sitemap: https://kilej.github.io/sitemap.xml
 
 
