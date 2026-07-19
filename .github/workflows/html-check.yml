@@ -6,13 +6,13 @@ jobs:
   htmlhint:
     runs-on: ubuntu-latest
     steps:
-          steps:
       - name: Pobierz kod z repozytorium
         uses: actions/checkout@v4
+
       - name: Konfiguracja srodowiska Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
       - name: Generuj mape strony i robots
         run: node generate-sitemap.js
-
