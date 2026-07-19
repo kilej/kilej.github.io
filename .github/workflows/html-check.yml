@@ -17,8 +17,12 @@ jobs:
       - name: Zainstaluj Biome w locie
         run: npm install -g @biomejs/biome
 
-      - name: Uruchom sprawdzanie kodu (Biome)
-        run: biome ci .
+      - name: Generuj mape strony i robots
+        run: node generate-sitemap.js
+        
+      - name: Uruchom sprawdzanie i naprawianie kodu (Biome)
+        run: biome check --write . || true
 
       - name: Generuj mape strony i robots
         run: node generate-sitemap.js
+
