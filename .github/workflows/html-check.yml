@@ -1,9 +1,9 @@
-name: Sprawdzanie HTML
+name: Sprawdzanie i Automatyzacja
 
 on: [push, pull_request]
 
 jobs:
-  htmlhint:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Pobierz kod z repozytorium
@@ -13,6 +13,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Zainstaluj Biome w locie
+        run: npm install -g @biomejs/biome
+
+      - name: Uruchom sprawdzanie kodu (Biome)
+        run: biome ci .
 
       - name: Generuj mape strony i robots
         run: node generate-sitemap.js
