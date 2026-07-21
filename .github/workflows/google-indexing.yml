@@ -19,9 +19,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Przygotowanie klucza autoryzacji
-        run: echo '${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}' > klucz-google.json
-
       - name: Uruchomienie bota indeksującego
         run: npx google-indexing-script https://kilej.github.io/sitemap.xml
 
