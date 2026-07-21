@@ -1,10 +1,8 @@
----
----
 User-agent: *
-Allow: /
 Disallow: /_layouts/
 Disallow: /_includes/
 Disallow: /_site/
 Disallow: /_posts/
 Disallow: /_drafts/
-sitemap: https://kilej.github.io/sitemap.xml 
+
+Sitemap: https://kilej.github.io/sitemap.xml 
