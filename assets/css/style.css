@@ -95,3 +95,63 @@ h2 {
     display: none !important;
   }
 }
+.navbar-wave {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Lekko wyższy, aby pomieścić fale */
+  background: rgba(10, 25, 50, 0.5); /* Ciemnoniebieskie, szklane tło */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 25px;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+.wave-container {
+  position: absolute;
+  bottom: -40px; 
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-container svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px; 
+}
+.wave-back {
+  fill: rgba(0, 150, 255, 0.25);
+}
+.wave-front {
+  fill: rgba(10, 25, 50, 0.5);
+}
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 18px;
+  padding: 0;
+  margin-bottom: 5px; /* 
+}
+
+.burger-menu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+body {
+  padding-top: 110px;
+}
+
