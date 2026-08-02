@@ -177,7 +177,8 @@ body {
 }
   /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
  .sound-rec-container {
-    position: absolute;     /* Przypina element na stałe do ekranu, ignorując tekst strony */
+    position: fixed;
+   /* Przypina element na stałe do ekranu, ignorując tekst strony */
     top: 5px;               /* Bezpieczny, mały odstęp od samej górnej krawędzi wyświetlacza */
     left: 15px;              /* Lekkie odsunięcie od lewej krawędzi ekranu */
     display: flex;
@@ -195,7 +196,7 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-    animation: marqueeRec 12s infinite linear;
+    animation: textPulse 2s infinite ease-in-out;
 }
 
 @keyframes marqueeRec {
