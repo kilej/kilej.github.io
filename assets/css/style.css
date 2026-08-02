@@ -195,7 +195,7 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-    animation: textPulse 2s infinite ease-in-out, marqueeRec 12s linear infinite;
+    animation: marqueeRec 12s infinite linear;
 }
 
 @keyframes marqueeRec {
