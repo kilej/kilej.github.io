@@ -211,7 +211,7 @@ body {
 .wave-bar {
     width: 3px;
     height: 18px;            /* Lekko zwiększona wysokość dla lepszego efektu */
-    background: linear-gradient(to top, #1a75ff, #b4222b);
+    background: linear-gradient(to top, #3a86c8, #b4222b);
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
