@@ -95,26 +95,20 @@ h2 {
     display: none !important;
   }
 }
-/* Idealnie równy, prześwitujący pasek wtapiający się w tło */
 .navbar-mist {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
-  
-  /* Płynne przejście: od lekkiego błękitu na samej górze do pełnej przezroczystości */
   background: linear-gradient(
     to bottom, 
     rgba(0, 30, 80, 0.4) 0%, 
     rgba(0, 50, 120, 0.2) 60%, 
     rgba(0, 0, 0, 0) 100%
   );
-  
-  /* Efekt delikatnego rozmycia tła (jak przez mgłę) */
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -122,8 +116,6 @@ h2 {
   box-sizing: border-box;
   z-index: 9999;
 }
-
-/* Minimalistyczna, biała ikonka menu */
 .burger-menu {
   background: none;
   border: none;
@@ -144,8 +136,6 @@ h2 {
   border-radius: 2px;
   opacity: 0.9;
 }
-
-/* Prawidłowy odstęp dla tekstu, żeby nie wchodził pod menu */
 body {
   padding-top: 80px;
 }
