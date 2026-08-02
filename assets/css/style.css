@@ -191,7 +191,7 @@ body {
 .rec-badge {
     font-size: 0.9rem;
     font-weight: 900;
-    color: #ff3333;
+    color: #bd2122;
     letter-spacing: 2px;
     display: flex;
     align-items: center;
@@ -202,52 +202,19 @@ body {
 .live-dot {
     width: 8px;
     height: 8px;
-    background-color: #ff3333;
+    background-color: #bd2122;
     border-radius: 50%;
-    box-shadow: 0 0 8px #ff3333;
+    box-shadow: 0 0 8px #bd2122;
 }
+
+/* Fale dźwiękowe - Potrójny kosmiczny neon */
 .wave-bar {
     width: 3px;
     height: 18px; 
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; 
     animation: soundBounce 0.6s infinite alternate ease-in-out;
-    box-shadow: 0 0 10px #00b4d8;
-}
-/* Pojedynczy słupek fali */
-.wave-bar {
-  width: 3px;
-  height: 18px;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 2px;
-  display: inline-block;
-  transform-origin: bottom;
-  animation: soundBounce 0.6s infinite alternate ease-in-out;
-  
-  /* Twoje oryginalne, idealne kolory */
-  box-shadow: 0 0 6px #0077b6, 0 0 11px #a21caf, 0 0 16px #bd2122 !important;
-  
-  /* KOMENDA PODBIJAJĄCA KOLORY: Wymusza ekstremalne nasycenie i ostrość cieni na ekranach telefonów */
-  filter: saturate(2) brightness(1.2) !important;
-  -webkit-filter: saturate(2) brightness(1.2) !important;
-}
-
-/* Różne wysokości fal dla realizmu */
-.wave-bar:nth-child(2) { animation-delay: 0.15s; height: 24px; }
-.wave-bar:nth-child(3) { animation-delay: 0.35s; height: 12px; }
-
-/* ANIMACJA 1: Skakanie pasków góra/dół */
-@keyframes soundBounce {
-  0% { transform: scaleY(0.3); }
-  100% { transform: scaleY(1.3); }
-}
-
-/* ANIMACJA 2: Płynne chowanie i wysuwanie fal */
-@keyframes waveReveal {
-  0% { max-width: 0px; opacity: 0; }
-  20% { max-width: 50px; opacity: 1; }
-  80% { max-width: 50px; opacity: 1; }
-  100% { max-width: 0px; opacity: 0; }
+    box-shadow: 0 0 8px #0077b6, 0 0 14px #a21caf, 0 0 20px #bd2122;
 }
