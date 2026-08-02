@@ -154,13 +154,37 @@ body {
     font-weight: 700;
 }
 
-/* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
+
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.bio-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+.bio-section p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-section strong {
+    color: #ffffff;
+}
+  /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
 .sound-rec-container {
+    position: absolute;      /* Wymusza pozycję niezależną od tekstu strony */
+    top: 20px;               /* Odstęp od górnej krawędzi ekranu */
+    left: 20px;              /* Odstęp od lewej krawędzi ekranu */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px; /* Odstęp od ksywy KIŁEJ */
+    gap: 12px;
+    z-index: 9999;           /* Gwarantuje, że fale będą na samym wierzchu, nad tłem */
 }
 
 /* Pulsujący napis REC */
@@ -186,87 +210,48 @@ body {
 /* Pojedynczy słupek fali */
 .wave-bar {
     width: 3px;
-    height: 15px;
-    background-color: rgba(255, 255, 255, 0.7);
+    height: 18px;            /* Lekko zwiększona wysokość dla lepszego efektu */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 2px;
     display: inline-block;
+    transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
     animation: soundBounce 0.6s infinite alternate ease-in-out;
 }
 
 /* Różne wysokości fal dla realizmu */
-.wave-bar:nth-child(2) { animation-delay: 0.15s; height: 22px; }
-.wave-bar:nth-child(3) { animation-delay: 0.3s; height: 10px; }
+.wave-bar:nth-child(2) { animation-delay: 0.15s; height: 24px; }
+.wave-bar:nth-child(3) { animation-delay: 0.3s; height: 12px; }
 
-/* Grupy fal (odpowiadają za chowanie i wysuwanie z boku) */
+/* Grupy fal */
 .wave-group {
     display: flex;
-    align-items: center;
+    align-items: flex-end;   /* Wyrównanie pasków do dołu */
     gap: 4px;
     overflow: hidden;
-    width: 25px;
     animation: waveReveal 4s infinite ease-in-out;
 }
 
 /* ANIMACJA 1: Skakanie pasków góra/dół */
 @keyframes soundBounce {
-    0% { transform: scaleY(0.4); }
-    100% { transform: scaleY(1.2); }
+    0% { transform: scaleY(0.3); }
+    100% { transform: scaleY(1.3); }
 }
 
-/* ANIMACJA 2: Płynne chowanie i wysuwanie fal */
+/* ANIMACJA 2: Płynne chowanie i wysuwanie fal (używamy max-width zamiast width) */
 @keyframes waveReveal {
-    0% { width: 0px; opacity: 0; }       /* Schowane */
-    20% { width: 25px; opacity: 1; }     /* Wysunięte i grają */
-    80% { width: 25px; opacity: 1; }     /* Dalej grają */
-    100% { width: 0px; opacity: 0; }     /* Płynnie znikają */
+    0% { max-width: 0px; opacity: 0; }
+    20% { max-width: 50px; opacity: 1; }
+    80% { max-width: 50px; opacity: 1; }
+    100% { max-width: 0px; opacity: 0; }
 }
 
 /* ANIMACJA 3: Pulsowanie czerwonego napisu */
 @keyframes textPulse {
     0% { opacity: 1; }
-    50% { opacity: 0.5; }
+    50% { opacity: 0.4; }
     100% { opacity: 1; }
 }
 
-/* 4. GŁÓWNA SEKCJA Z BIOGRAMEM (Efekt szkła) */
-.main-content {
-    flex: 1;
-    padding: 20px 0 60px 0;
-}
-
-.bio-section {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 12px;
-    padding: 40px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    text-align: left; /* Tekst biogramu od lewej dla lepszego czytania */
-}
-
-.bio-section h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-.bio-section p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #d1d5db;
-    margin-bottom: 20px;
-}
-
-.bio-section p:last-child {
-    margin-bottom: 0;
-}
-
-.bio-section strong {
-    color: #ffffff;
-}
 
 /* 5. STOPKA STRONY */
 .main-footer {
