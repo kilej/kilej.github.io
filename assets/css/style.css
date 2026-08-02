@@ -207,6 +207,7 @@ body {
     box-shadow: 0 0 8px #ff3333;
 }
 /* ZBALANSOWANY SŁUPEK: BŁĘKIT, LEKKI FIOLET I STONOWANA CZERWIEŃ */
+/* SŁUPEK FALI: CIEMNIEJSZY BŁĘKIT I STONOWANA CZERWIEŃ */
 .wave-bar {
   width: 3px;
   height: 18px;
@@ -217,17 +218,16 @@ body {
   animation: soundBounce 0.6s infinite alternate ease-in-out;
   -webkit-animation: soundBounce 0.6s infinite alternate ease-in-out;
 
-  /* GRADIENT: Błękit, delikatny fiolet w środku i lżejsza, ciemniejsza czerwień na górze */
-  background: -webkit-linear-gradient(bottom, #0077bb 0%, #a21caf 55%, #bd2122 100%);
-  background: linear-gradient(to top, #0077bb 0%, #a21caf 55%, #bd2122 100%);
+  /* GRADIENT: Ciemniejszy błękit przechodzący bezpośrednio w lżejszą czerwień */
+  background: -webkit-linear-gradient(bottom, #005599 0%, #bd2122 100%);
+  background: linear-gradient(to top, #005599 0%, #bd2122 100%);
 
-  /* ZAGŁUSZONA POŚWIATA: Mniejsze promienie świecenia, aby nie paliły oczu i nie wchodziły w tło */
-  box-shadow: 0 0 4px #0077bb, 
-              0 0 8px #a21caf, 
+  /* DYSKRETNA POŚWIATA: Dopasowana do tła, nie oślepia i nie rozmywa się za mocno */
+  box-shadow: 0 0 5px #005599, 
               0 0 10px #bd2122;
 }
 
-/* Wariacje opóźnień i wysokości fali */
+/* Różne opóźnienia i wysokości dla naturalnego efektu audio */
 .wave-group .wave-bar:nth-child(2) {
   animation-delay: 0.15s;
   -webkit-animation-delay: 0.15s;
@@ -240,7 +240,7 @@ body {
   height: 12px;
 }
 
-/* Stabilna animacja dla PC i urządzeń mobilnych */
+/* ANIMACJA: Płynne skakanie pasków (Kompatybilna z telefonem i PC) */
 @keyframes soundBounce {
   0% { transform: scaleY(0.4); }
   100% { transform: scaleY(1.2); }
@@ -249,4 +249,3 @@ body {
   0% { -webkit-transform: scaleY(0.4); }
   100% { -webkit-transform: scaleY(1.2); }
 }
-
