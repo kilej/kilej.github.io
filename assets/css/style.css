@@ -191,7 +191,7 @@ body {
 .rec-badge {
     font-size: 0.9rem;
     font-weight: 900;
-    color: #d9383a;
+    color: #ff3333;
     letter-spacing: 2px;
     display: flex;
     align-items: center;
@@ -202,9 +202,9 @@ body {
 .live-dot {
     width: 8px;
     height: 8px;
-    background-color: #d9383a;
+    background-color: #ff3333;
     border-radius: 50%;
-    box-shadow: 0 0 8px #d9383a;
+    box-shadow: 0 0 8px #ff3333;
 }
 
 /* Pojedynczy słupek fali */
