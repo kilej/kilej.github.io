@@ -206,8 +206,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 8px #ff3333;
 }
-
-/* SŁUPEK FALI: TRZY PODZIELONE KOLORY Z DOPASOWANIEM DO KROPKI */
+/* ZBALANSOWANY SŁUPEK: BŁĘKIT, LEKKI FIOLET I STONOWANA CZERWIEŃ */
 .wave-bar {
   width: 3px;
   height: 18px;
@@ -218,17 +217,17 @@ body {
   animation: soundBounce 0.6s infinite alternate ease-in-out;
   -webkit-animation: soundBounce 0.6s infinite alternate ease-in-out;
 
-  /* 1. TRZY KOLORY: Błękit na dole, lekki fiolet na środku, czerwień kropki na górze */
-  background: -webkit-linear-gradient(bottom, #0077bb 0%, #a21caf 50%, #ff3333 100%);
-  background: linear-gradient(to top, #0077bb 0%, #a21caf 50%, #ff3333 100%);
+  /* GRADIENT: Błękit, delikatny fiolet w środku i lżejsza, ciemniejsza czerwień na górze */
+  background: -webkit-linear-gradient(bottom, #0077bb 0%, #a21caf 55%, #bd2122 100%);
+  background: linear-gradient(to top, #0077bb 0%, #a21caf 55%, #bd2122 100%);
 
-  /* 2. POŚWIATA NEONOWA: Dopasowana do trzech stref kolorów */
-  box-shadow: 0 0 6px #0077bb, 
-              0 0 11px #a21caf, 
-              0 0 14px #ff3333;
+  /* ZAGŁUSZONA POŚWIATA: Mniejsze promienie świecenia, aby nie paliły oczu i nie wchodziły w tło */
+  box-shadow: 0 0 4px #0077bb, 
+              0 0 8px #a21caf, 
+              0 0 10px #bd2122;
 }
 
-/* Wariacje opóźnień i wysokości dla efektu fali dźwiękowej */
+/* Wariacje opóźnień i wysokości fali */
 .wave-group .wave-bar:nth-child(2) {
   animation-delay: 0.15s;
   -webkit-animation-delay: 0.15s;
@@ -241,7 +240,7 @@ body {
   height: 12px;
 }
 
-/* PŁYNNA ANIMACJA (Kompatybilna z telefonami i PC) */
+/* Stabilna animacja dla PC i urządzeń mobilnych */
 @keyframes soundBounce {
   0% { transform: scaleY(0.4); }
   100% { transform: scaleY(1.2); }
@@ -250,3 +249,4 @@ body {
   0% { -webkit-transform: scaleY(0.4); }
   100% { -webkit-transform: scaleY(1.2); }
 }
+
