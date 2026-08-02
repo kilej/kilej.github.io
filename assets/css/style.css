@@ -177,7 +177,7 @@ body {
 }
   /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
  .sound-rec-container {
-    position: fixed;         /* Przypina element na stałe do ekranu, ignorując tekst strony */
+    position: absolute;     /* Przypina element na stałe do ekranu, ignorując tekst strony */
     top: 5px;               /* Bezpieczny, mały odstęp od samej górnej krawędzi wyświetlacza */
     left: 15px;              /* Lekkie odsunięcie od lewej krawędzi ekranu */
     display: flex;
@@ -186,7 +186,6 @@ body {
     gap: 12px;
     z-index: 1;           /* Gwarantuje, że nic nie przykryje fal */
 }
-
 /* Pulsujący i przesuwający się napis REC */
 .rec-badge {
     font-size: 0.9rem;
@@ -196,13 +195,12 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-    position: relative;
     animation: textPulse 2s infinite ease-in-out, marqueeRec 12s linear infinite;
 }
 
 @keyframes marqueeRec {
-    0% { transform: translateX(-50vw); }
-    100% { transform: translateX(100vw); }
+    0% { transform: translateX(-20px); }
+    100% { transform: translateX(250px); }
 }
   h1, p {
     position: relative;
