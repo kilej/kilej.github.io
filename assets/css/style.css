@@ -184,7 +184,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    z-index: 9999;           /* Gwarantuje, że nic nie przykryje fal */
+    z-index: 1;           /* Gwarantuje, że nic nie przykryje fal */
 }
 
 /* Pulsujący i przesuwający się napis REC */
@@ -197,13 +197,16 @@ body {
     align-items: center;
     gap: 6px;
     position: relative;
-    z-index: 1;
     animation: textPulse 2s infinite ease-in-out, marqueeRec 12s linear infinite;
 }
 
 @keyframes marqueeRec {
     0% { transform: translateX(-50vw); }
     100% { transform: translateX(100vw); }
+}
+  h1, p {
+    position: relative;
+    z-index: 2;
 }
 .live-dot {
     width: 8px;
