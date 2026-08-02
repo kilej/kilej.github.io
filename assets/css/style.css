@@ -211,7 +211,7 @@ body {
 .wave-bar {
     width: 3px;
     height: 18px; 
-    background: linear-gradient(to top, #4ea8de, #d9383a);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; 
