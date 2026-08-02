@@ -191,7 +191,7 @@ body {
 .rec-badge {
     font-size: 0.9rem;
     font-weight: 900;
-    color: #d9383a;
+    color: #b4222b;
     letter-spacing: 2px;
     display: flex;
     align-items: center;
@@ -202,7 +202,7 @@ body {
 .live-dot {
     width: 8px;
     height: 8px;
-    background-color: #d9383a;
+    background-color: #b4222b;
     border-radius: 50%;
     box-shadow: 0 0 8px #d9383a;
 }
@@ -211,7 +211,7 @@ body {
 .wave-bar {
     width: 3px;
     height: 18px;            /* Lekko zwiększona wysokość dla lepszego efektu */
-    background: linear-gradient(to top, #4ea8de, #d9383a);
+    background: linear-gradient(to top, #4ea8de, #b4222b);
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
