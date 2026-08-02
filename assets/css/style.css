@@ -216,6 +216,7 @@ body {
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
     animation: soundBounce 0.6s infinite alternate ease-in-out;
+  box-shadow: 0 0 8px #00b4d8;
 }
 
 /* Różne wysokości fal dla realizmu */
