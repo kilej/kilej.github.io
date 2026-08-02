@@ -211,12 +211,11 @@ body {
 .wave-bar {
     width: 3px;
     height: 18px;            /* Lekko zwiększona wysokość dla lepszego efektu */
-    filter: drop-shadow(0 0 5px #00b4d8);
+    background: linear-gradient(to top, #4ea8de, #d9383a);
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
     animation: soundBounce 0.6s infinite alternate ease-in-out;
-  box-shadow: 0 0 8px #00b4d8;
 }
 
 /* Różne wysokości fal dla realizmu */
