@@ -211,14 +211,13 @@ body {
 .wave-bar {
     width: 3px;
     height: 18px; 
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; 
     animation: soundBounce 0.6s infinite alternate ease-in-out;
-    box-shadow: 0 0 6px #0077b6, 0 0 12px #b5179e, 0 0 16px #d9383a;
+    box-shadow: 0 0 6px #0077b6, 0 0 11px #a21caf, 0 0 16px #bd2122;
 }
-
 /* Różne wysokości fal dla realizmu */
 .wave-bar:nth-child(2) { animation-delay: 0.15s; height: 24px; }
 .wave-bar:nth-child(3) { animation-delay: 0.3s; height: 12px; }
