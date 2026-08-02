@@ -210,12 +210,13 @@ body {
 /* Pojedynczy słupek fali */
 .wave-bar {
     width: 3px;
-    height: 18px;            /* Lekko zwiększona wysokość dla lepszego efektu */
-    background: linear-gradient(to top, #4ea8de, #d9383a);
+    height: 18px; 
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 2px;
     display: inline-block;
-    transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
+    transform-origin: bottom; 
     animation: soundBounce 0.6s infinite alternate ease-in-out;
+    box-shadow: 0 0 10px #00b4d8, 0 0 16px #7209b7;
 }
 
 /* Różne wysokości fal dla realizmu */
