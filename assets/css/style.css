@@ -207,68 +207,46 @@ body {
     box-shadow: 0 0 8px #ff3333;
 }
 
-/* Pojedynczy słupek fali */
+/* SŁUPEK FALI: TRZY PODZIELONE KOLORY Z DOPASOWANIEM DO KROPKI */
 .wave-bar {
-    width: 3px;
-    height: 18px; 
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 2px;
-    display: inline-block;
-    transform-origin: bottom; 
-    animation: soundBounce 0.6s infinite alternate ease-in-out;
-   box-shadow: 0 0 6px #0077b6, 0 0 11px #a21caf, 0 0 16px #bd2122;
-}
-/* Różne wysokości fal dla realizmu */
-.wave-bar:nth-child(2) { animation-delay: 0.15s; height: 24px; }
-.wave-bar:nth-child(3) { animation-delay: 0.3s; height: 12px; }
+  width: 3px;
+  height: 18px;
+  border-radius: 2px;
+  display: inline-block;
+  transform-origin: bottom;
+  -webkit-transform-origin: bottom;
+  animation: soundBounce 0.6s infinite alternate ease-in-out;
+  -webkit-animation: soundBounce 0.6s infinite alternate ease-in-out;
 
-/* Grupy fal */
-.wave-group {
-    display: flex;
-    align-items: flex-end;   /* Wyrównanie pasków do dołu */
-    gap: 4px;
-    overflow: hidden;
-    animation: waveReveal 4s infinite ease-in-out;
+  /* 1. TRZY KOLORY: Błękit na dole, lekki fiolet na środku, czerwień kropki na górze */
+  background: -webkit-linear-gradient(bottom, #0077bb 0%, #a21caf 50%, #ff3333 100%);
+  background: linear-gradient(to top, #0077bb 0%, #a21caf 50%, #ff3333 100%);
+
+  /* 2. POŚWIATA NEONOWA: Dopasowana do trzech stref kolorów */
+  box-shadow: 0 0 6px #0077bb, 
+              0 0 11px #a21caf, 
+              0 0 14px #ff3333;
 }
 
-/* ANIMACJA 1: Skakanie pasków góra/dół */
+/* Wariacje opóźnień i wysokości dla efektu fali dźwiękowej */
+.wave-group .wave-bar:nth-child(2) {
+  animation-delay: 0.15s;
+  -webkit-animation-delay: 0.15s;
+  height: 24px;
+}
+
+.wave-group .wave-bar:nth-child(3) {
+  animation-delay: 0.35s;
+  -webkit-animation-delay: 0.35s;
+  height: 12px;
+}
+
+/* PŁYNNA ANIMACJA (Kompatybilna z telefonami i PC) */
 @keyframes soundBounce {
-    0% { transform: scaleY(0.3); }
-    100% { transform: scaleY(1.3); }
+  0% { transform: scaleY(0.4); }
+  100% { transform: scaleY(1.2); }
 }
-
-/* ANIMACJA 2: Płynne chowanie i wysuwanie fal (używamy max-width zamiast width) */
-@keyframes waveReveal {
-    0% { max-width: 0px; opacity: 0; }
-    20% { max-width: 50px; opacity: 1; }
-    80% { max-width: 50px; opacity: 1; }
-    100% { max-width: 0px; opacity: 0; }
-}
-
-/* ANIMACJA 3: Pulsowanie czerwonego napisu */
-@keyframes textPulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.4; }
-    100% { opacity: 1; }
-}
-
-
-/* 5. STOPKA STRONY */
-.main-footer {
-    padding: 30px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.main-footer p {
-    font-size: 0.9rem;
-    color: #4b5563;
-}
-
-/* RESPONSYWNOŚĆ (Dostosowanie do małych ekranów telefonów) */
-@media (max-width: 600px) {
-    .artist-name { font-size: 2.3rem; letter-spacing: 4px; }
-    .artist-subtitle { font-size: 0.85rem; letter-spacing: 2px; }
-    .bio-section { padding: 25px; }
-    .bio-section h2 { font-size: 1.3rem; }
-    .bio-section p { font-size: 0.95rem; }
+@-webkit-keyframes soundBounce {
+  0% { -webkit-transform: scaleY(0.4); }
+  100% { -webkit-transform: scaleY(1.2); }
 }
