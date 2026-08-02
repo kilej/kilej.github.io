@@ -176,15 +176,15 @@ body {
     color: #ffffff;
 }
   /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
-.sound-rec-container {
-    position: absolute;      /* Wymusza pozycję niezależną od tekstu strony */
-    top: 20px;               /* Odstęp od górnej krawędzi ekranu */
-    left: 20px;              /* Odstęp od lewej krawędzi ekranu */
+ .sound-rec-container {
+    position: fixed;         /* Przypina element na stałe do ekranu, ignorując tekst strony */
+    top: 10px;               /* Bezpieczny, mały odstęp od samej górnej krawędzi wyświetlacza */
+    left: 15px;              /* Lekkie odsunięcie od lewej krawędzi ekranu */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    z-index: 9999;           /* Gwarantuje, że fale będą na samym wierzchu, nad tłem */
+    z-index: 9999;           /* Gwarantuje, że nic nie przykryje fal */
 }
 
 /* Pulsujący napis REC */
