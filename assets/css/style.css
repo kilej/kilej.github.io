@@ -240,11 +240,11 @@ p {
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
-    animation: soundBounce 3s infinite alternate ease-in-out;
+    animation: soundBounce 2.2s infinite alternate ease-in-out;
 }
 
 /* Różne wysokości fal dla realizmu */
-.wave-bar:nth-child(2) { animation-delay: 0.15s; height: 24px; }
+.wave-bar:nth-child(2) { animation-delay: 0.7s; height: 24px; }
 .wave-bar:nth-child(3) { animation-delay: 0.3s; height: 12px; }
 
 /* Grupy fal */
@@ -253,7 +253,7 @@ p {
     align-items: flex-end;   /* Wyrównanie pasków do dołu */
     gap: 4px;
     overflow: hidden;
-    animation: waveReveal 4s infinite ease-in-out;
+    animation: waveReveal 5s ease-in-out;
 }
 
 /* ANIMACJA 1: Skakanie pasków góra/dół */
