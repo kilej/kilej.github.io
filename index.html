@@ -122,7 +122,7 @@
 <h2><strong>Kiłej (właśc. Daniel Kilarski)</strong> - Podziemny raper, Lubuskie, urodzony 28.11.1995 roku w Szprotawie, Alternatywne Pseudonimy Artysty: Danio Kiłej, Kiłej87, Kiłejofficial</h2>
 <div class="biografia-kontener">
  <h3> Gatunek muzyczny - Rap (West Coast, Boom Bap, Klasyczny Oldschool) i inne. *** 一━═̿┻̷︻▄ 😉</h2>
- <ul>
+ <ul class="music-links">
 <li><a href="https://open.spotify.com/artist/4Uua4f1355hQp1duls7kKK?si=lfGqD7zKQGu0aiaZ945ofQ">Spotify</a></li>
 <li><a href="https://youtube.com/@kilejofficial">YouTube</a></li>
 <li><a href="https://audiomack.com/kilej/likes">Audiomack</a></li>
@@ -154,6 +154,21 @@ display: none !important; } } </style>
 </ul>
 </style>
 </ul>
+    <script>
+  // Skrypt znajduje paski oraz wszystkie Twoje linki muzyczne
+  const waveGroups = document.querySelectorAll('.wave-group');
+  const musicLinks = document.querySelectorAll('.music-links a');
+
+  // Dla każdego linku dodajemy obsługę kliknięcia
+  musicLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Po kliknięciu dodajemy klasę 'playing', która uruchamia ruch pasków
+      waveGroups.forEach(group => {
+        group.classList.add('playing');
+      });
+    });
+  });
+</script>
 <div style="display: flex; gap: 20px; overflow-x: auto; padding: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
 <iframe style="flex: 0 0 350px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: start;"
 src="https://open.spotify.com/embed/artist/4Uua4f1355hQp1duls7kKK"
