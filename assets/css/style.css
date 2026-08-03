@@ -196,7 +196,7 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-    animation: textPulse 2s infinite ease-in-out;
+    animation: textPulse 0,5s infinite ease-in-out;
 }
 
 @keyframes marqueeRec {
