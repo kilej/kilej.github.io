@@ -191,13 +191,14 @@ body {
 .rec-badge {
     font-size: 0.9rem;
     font-weight: 900;
-    color: #FF0000
+    color: #FF0000 !important;
     letter-spacing: 2px;
     display: flex;
     align-items: center;
     gap: 6px;
     animation: textPulse 0,5s infinite ease-in-out;
-  
+mix-blend-mode: overlay;
+
 }
 
 @keyframes marqueeRec {
