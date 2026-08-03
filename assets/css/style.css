@@ -241,6 +241,7 @@ p {
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
     animation: soundBounce 8s infinite alternate ease-in-out;
+  animation-play-state: paused;
 }
 
 /* Różne wysokości fal dla realizmu */
@@ -255,7 +256,9 @@ p {
     overflow: hidden;
     animation: waveReveal 2s ease-in-out;
 }
-
+.playing .wave-bar {
+    animation-play-state: running;
+}
 /* ANIMACJA 1: Skakanie pasków góra/dół */
 @keyframes soundBounce {
     0% { transform: scaleY(0.3); }
