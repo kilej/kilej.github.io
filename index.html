@@ -153,65 +153,6 @@ display: none !important; } } </style>
 <div/>
 </ul>
 </style>
-<script>
-let isSpotifyPlaying = false;
-let isYouTubePlaying = false;
-
-function updateWaveState() {
-    // Zmienione na .wave-group, bo taką klasę masz w HTML
-    const waveGroups = document.querySelectorAll('.wave-group');
-    
-    waveGroups.forEach(group => {
-        if (isSpotifyPlaying || isYouTubePlaying) {
-            group.classList.add('playing');
-        } else {
-            group.classList.remove('playing');
-        }
-    });
-}
-
-window.onSpotifyIframeApiReady = (IFrameAPI) => {
-    const element = document.getElementById('spotify-player'); 
-    if (!element) return;
-    
-    const options = {
-        uri: 'spotify:artist:4Uua4f1355hQpIduls7KKK'
-    };
-    
-    IFrameAPI.createController(element, options, (EmbedController) => {
-        EmbedController.addListener('playback_update', (e) => {
-            isSpotifyPlaying = (e.data && e.data.isPaused === false);
-            updateWaveState();
-        });
-    });
-};
-
-if (!document.querySelector('script[src="https://youtube.com"]')) {
-    var tag = document.createElement('script');
-    tag.src = "https://youtube.com";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    if (firstScriptTag) {
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    } else {
-        document.head.appendChild(tag);
-    }
-}
-
-window.onYouTubeIframeAPIReady = () => {
-    const element = document.getElementById('youtube-player');
-    if (!element) return;
-
-    new YT.Player('youtube-player', {
-        events: {
-            'onStateChange': (event) => {
-                isYouTubePlaying = (event.data === 1);
-                updateWaveState();
-            }
-        }
-    });
-};
-</script>
-
 <div style="display: flex; gap: 20px; overflow-x: auto; padding: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
     <iframe id="spotify-player" style="flex: 0 0 350px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: start;" src="https://spotify.com" title="Odtwarzacz Spotify - Kilej (Daniel Kilarski)" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     <iframe id="youtube-player" style="flex: 0 0 350px; height: 352px; border-radius: 12px; border: none; scroll-snap-align: start;" src="https://youtube.com" title="YouTube video player" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
