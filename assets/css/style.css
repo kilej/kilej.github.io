@@ -185,7 +185,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    z-index: -3;           /* Gwarantuje, że nic nie przykryje fal */
+    z-index: -10;           /* Gwarantuje, że nic nie przykryje fal */
 }
 /* Pulsujący i przesuwający się napis REC */
 .rec-badge {
