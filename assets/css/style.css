@@ -191,8 +191,12 @@ body {
 .rec-badge {
     font-size: 0.9rem;
     font-weight: 900;
+    .rec-badge {
+    /* ... dotychczasowe właściwości ... */
     color: #FF0000 !important;
-text-shadow: 0 0 5px #FF0000 !important, 0 0 15px #FF0000 !important;
+    text-shadow: 0 0 5px #FF0000, 0 0 15px #FF0000, 0 0 30px #FF0000;
+    /* ... reszta właściwości ... */
+}
     letter-spacing: 2px;
     display: flex;
     align-items: center;
@@ -201,15 +205,19 @@ text-shadow: 0 0 5px #FF0000 !important, 0 0 15px #FF0000 !important;
 mix-blend-mode: overlay;
 
 }
-
-@keyframes marqueeRec {
-    0% { transform: translateX(-20px); }
-    100% { transform: translateX(250px); }
-}
-  @keyframes textPulse {
-  0% { opacity: 1; }
-  38% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes textPulse {
+    0% { 
+        opacity: 0.3; 
+        text-shadow: 0 0 2px #FF0000;
+    }
+    38% { 
+        opacity: 0; 
+        text-shadow: 0 0 8px #FF0000, 0 0 20px #FF0000;
+    }
+    100% { 
+        opacity: 0.3; 
+        text-shadow: 0 0 2px #FF0000;
+    }
 }
   h1 {
     position: relative;
