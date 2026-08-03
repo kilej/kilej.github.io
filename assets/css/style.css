@@ -197,7 +197,7 @@ body {
     align-items: center;
     gap: 6px;
     animation: textPulse 0,5s infinite ease-in-out;
-  mix-blend-mode: overlay;
+  
 }
 
 @keyframes marqueeRec {
