@@ -205,7 +205,7 @@ body {
 }
   @keyframes textPulse {
   0% { opacity: 1; }
-  38% { opacity: 0.1; }
+  38% { opacity: 0; }
   100% { opacity: 1; }
 }
   h1, p {
