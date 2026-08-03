@@ -175,6 +175,11 @@ body {
 .bio-section strong {
     color: #ffffff;
 }
+      .artist-subtitle { font-size: 0.85rem; letter-spacing: 2px; }
+    .bio-section { padding: 25px; }
+    .bio-section h2 { font-size: 1.3rem; }
+    .bio-section p { font-size: 0.95rem; }
+}
   /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
  .sound-rec-container {
     position: fixed;
@@ -191,33 +196,23 @@ body {
 .rec-badge {
     font-size: 0.9rem;
     font-weight: 900;
-    .rec-badge {
-    /* ... dotychczasowe właściwości ... */
-    color: #FF0000 !important;
-    text-shadow: 0 0 5px #FF0000, 0 0 15px #FF0000, 0 0 30px #FF0000;
-    /* ... reszta właściwości ... */
-}
+    color: #c93b43;
     letter-spacing: 2px;
     display: flex;
     align-items: center;
     gap: 6px;
     animation: textPulse 0,5s infinite ease-in-out;
-mix-blend-mode: overlay;
-
+  mix-blend-mode: overlay;
 }
-@keyframes textPulse {
-    0% { 
-        opacity: 0.3; 
-        text-shadow: 0 0 2px #FF0000;
-    }
-    38% { 
-        opacity: 0; 
-        text-shadow: 0 0 8px #FF0000, 0 0 20px #FF0000;
-    }
-    100% { 
-        opacity: 0.3; 
-        text-shadow: 0 0 2px #FF0000;
-    }
+
+@keyframes marqueeRec {
+    0% { transform: translateX(-20px); }
+    100% { transform: translateX(250px); }
+}
+  @keyframes textPulse {
+  0% { opacity: 1; }
+  38% { opacity: 0; }
+  100% { opacity: 1; }
 }
   h1 {
     position: relative;
@@ -232,9 +227,9 @@ p {
 .live-dot {
     width: 8px;
     height: 8px;
-    background-color: #FF0000;
+    background-color: #c93b43;
     border-radius: 50%;
-    box-shadow: 0 0 5px #FF0000 !important, 0 0 15px #FF0000 !important, 0 0 25px #FF0000 !important;
+    box-shadow: 0 0 8px #d9383a;
 }
 
 /* Pojedynczy słupek fali */
