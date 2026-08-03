@@ -185,7 +185,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    z-index: 1;           /* Gwarantuje, że nic nie przykryje fal */
+    z-index: -3;           /* Gwarantuje, że nic nie przykryje fal */
 }
 /* Pulsujący i przesuwający się napis REC */
 .rec-badge {
@@ -208,7 +208,13 @@ body {
   38% { opacity: 0; }
   100% { opacity: 1; }
 }
-  h1, p {
+  h1 {
+    position: relative;
+    z-index: 10;
+    margin-top: 60px; /* To zrobi wolne miejsce na panel REC na samej górze */
+}
+
+p {
     position: relative;
     z-index: 10;
 }
