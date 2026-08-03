@@ -185,7 +185,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    z-index: -10;           /* Gwarantuje, że nic nie przykryje fal */
+    z-index: -15;           /* Gwarantuje, że nic nie przykryje fal */
 }
 /* Pulsujący i przesuwający się napis REC */
 .rec-badge {
@@ -197,6 +197,7 @@ body {
     align-items: center;
     gap: 6px;
     animation: textPulse 0,5s infinite ease-in-out;
+  mix-blend-mode: overlay;
 }
 
 @keyframes marqueeRec {
@@ -266,9 +267,9 @@ p {
 
 /* ANIMACJA 3: Pulsowanie czerwonego napisu */
 @keyframes textPulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.4; }
-    100% { opacity: 1; }
+    0% { opacity: 0,7; }
+    50% { opacity: 0.1; }
+    100% { opacity: 0,7; }
 }
 
 
