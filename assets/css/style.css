@@ -180,7 +180,7 @@ body {
     .bio-section h2 { font-size: 1.3rem; }
     .bio-section p { font-size: 0.95rem; }
 }
-  /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
+/* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
  .sound-rec-container {
     position: fixed;
    /* Przypina element na stałe do ekranu, ignorując tekst strony */
@@ -240,11 +240,12 @@ p {
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
-    animation: soundBounce 2,6s infinite alternate ease-in-out;
+    animation: soundBounce 2.2s infinite alternate ease-in-out;
 }
+
 /* Różne wysokości fal dla realizmu */
-.wave-bar:nth-child(2) { animation-delay: 0.3s; height: 24px; }
-.wave-bar:nth-child(3) { animation-delay: 0.2s; height: 12px; }
+.wave-bar:nth-child(2) { animation-delay: 0.7s; height: 24px; }
+.wave-bar:nth-child(3) { animation-delay: 0.3s; height: 12px; }
 
 /* Grupy fal */
 .wave-group {
@@ -252,15 +253,13 @@ p {
     align-items: flex-end;   /* Wyrównanie pasków do dołu */
     gap: 4px;
     overflow: hidden;
-    animation: waveReveal 3s ease-in-out;
+    animation: waveReveal 5s ease-in-out;
 }
-.playing .wave-bar {
-    animation-play-state: running;
-}
+
 /* ANIMACJA 1: Skakanie pasków góra/dół */
 @keyframes soundBounce {
     0% { transform: scaleY(0.3); }
-    100% { transform: scaleY(0.6); }
+    100% { transform: scaleY(1.3); }
 }
 
 /* ANIMACJA 2: Płynne chowanie i wysuwanie fal (używamy max-width zamiast width) */
