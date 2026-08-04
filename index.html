@@ -118,15 +118,20 @@
 </div>
 
     
-<!-- ZDJĘCIE OD LEWEJ DO PRAWEJ Z POPRAWNĄ ŚCIEŻKĄ ASSETS -->
-<div style="width: 100%; margin-top: 75px; margin-bottom: 75px; box-sizing: border-box; position: relative; padding: 6px 0; background: linear-gradient(90deg, #ff0000 0%, #3a0000 50%, #ff0000 100%); box-shadow: 0 0 25px rgba(255, 0, 0, 0.45), 0 15px 35px rgba(0, 0, 0, 0.9);">
+top: 2px solid rgba(255, 255, 255, 0.2); border-bottom: 2px solid rgba(255, 255, 255, 0.2); pointer-events: none; z-index: 
+
+    <!-- KADROWANY BANER 50% WYSOKOŚCI Z PEŁNĄ NEONOWĄ RAMKĄ DOOKOŁA -->
+<div style="width: 100%; height: 50vh; margin-top: 75px; margin-bottom: 75px; box-sizing: border-box; position: relative; overflow: hidden; background: linear-gradient(90deg, #ff0000 0%, #3a0000 50%, #ff0000 100%); box-shadow: 0 0 35px rgba(255, 0, 0, 0.65), inset 0 0 20px rgba(255, 0, 0, 0.5);">
     
-    <!-- Błyszczący pasek wewnętrzny (góra i dół) -->
-    <div style="position: absolute; top: 2px; bottom: 2px; left: 0; right: 0; border-top: 2px solid rgba(255, 255, 255, 0.2); border-bottom: 2px solid rgba(255, 255, 255, 0.2); pointer-events: none; z-index: 2;"></div>
+    <!-- Lśniący pasek wewnętrzny działający na wszystkie 4 krawędzie (góra, dół, boki) -->
+    <div style="position: absolute; top: 3px; bottom: 3px; left: 3px; right: 3px; border: 2.5px solid rgba(255, 255, 255, 0.35); pointer-events: none; z-index: 2; box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);"></div>
     
-    <!-- Zdjęcie pobierane bezpośrednio z Twojego folderu assets -->
-<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/assets/css/Ki%C5%82ej-oficjalne-zdjecie-prasowe%20i%20Knowledge%20panel.png" alt="Kiłej - Oficjalne zdjęcie prasowe" style="display: block; width: 100%; height: auto; position: relative; z-index: 1;">
+    <!-- Twoje zdjęcie pobierane z linku - docięte do połowy ekranu i błyszczące -->
+    <img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/assets/css/Ki%C5%82ej-oficjalne-zdjecie-prasowe%20i%20Knowledge%20panel.png" 
+         alt="Kiłej - Oficjalne zdjęcie prasowe" 
+         style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; position: relative; z-index: 1;">
 </div>
+
 
     
 <main>
