@@ -243,9 +243,9 @@ p {
     animation: soundBounce 1.6s infinite alternate ease-in-out;
 }
 /* Różne wysokości fal dla realizmu */
-.wave-bar:nth-child(1) { animation-delay: 0.3s; height: 15px; }
-.wave-bar:nth-child(2) { animation-delay: 0.20s; height: 24px; }
-.wave-bar:nth-child(3) { animation-delay: 0.05s; height: 15px; }
+.wave-bar:nth-child(1) { animation-delay: 0.3s; height: 13px; }
+.wave-bar:nth-child(2) { animation-delay: 0.20s; height: 21px; }
+.wave-bar:nth-child(3) { animation-delay: 0.05s; height: 16px; }
 /* Grupy fal */
 .wave-group {
     display: flex;
