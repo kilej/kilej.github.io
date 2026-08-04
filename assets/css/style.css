@@ -296,3 +296,60 @@ p {
     .bio-section h2 { font-size: 1.3rem; }
     .bio-section p { font-size: 0.95rem; }
 }
+/* GŁÓWNY KONTENER ZDJĘCIA - STEROWANIE ODSTĘPAMI W CM */
+.hero-section {
+    position: relative;
+    
+    /* ODSTĘPY OD WSZYSTKIEGO: 2cm od góry, 1cm od boków, 2cm od dołu */
+    margin: 2cm 1cm 2cm 1cm; 
+    
+    /* Dopasowanie wysokości portalu do pionowego zdjęcia */
+    min-height: 65vh; 
+    
+    /* TWOJE ZDJĘCIE Z DOKŁADNĄ NAZWĄ ZE SCREENA */
+    background: linear-gradient(to bottom, rgba(15, 15, 15, 0.1) 60%, rgba(15, 15, 15, 0.7) 100%), 
+                url('assets/css/Kiłej-oficjalne-zdjecie-prasowe i Knowledge panel.png');
+    
+    /* ROZCIĄGNIĘCIE OD LEWEJ DO PRAWEJ BEZ ZNIEKSZTAŁCEŃ */
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+
+    /* NAJLEPSZA CYFROWA RAMKA WPADAJĄCA W OKO */
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    box-shadow: 
+        0 0 20px rgba(78, 168, 222, 0.6),  /* Neonowy błękit (jak Twoje fale) */
+        0 0 35px rgba(180, 34, 43, 0.5),   /* Podziemna czerwień */
+        inset 0 0 45px rgba(0, 0, 0, 0.95); /* Głęboki mrok wyostrzający postać */
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* LEKKI EFEKT MATRIXA (Linie kineskopowe dodające charakteru) */
+.hero-section::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(255, 255, 255, 0.04) 50%);
+    background-size: 100% 4px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* STYL DLA NAPISU PONIŻEJ ZDJĘCIA */
+.hero-title {
+    font-size: 1.8rem;
+    color: #ffffff; /* Czysta, wyraźna biel */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0 1cm; /* Dopasowanie szerokości tekstu do ramki zdjęcia */
+    
+    /* Subtelna poświata brandowa, łącząca kontekst muzyczny */
+    text-shadow: 0 0 10px rgba(78, 168, 222, 0.8), 2px 2px 5px #000000;
+}
