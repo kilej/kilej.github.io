@@ -102,27 +102,28 @@
     
 
 <style>
-@keyframes smoczyBanerNiebieski {
+@keyframes lodowySmok {
   0% {
-    /* Głęboki, ciemny błękit pasujący do tła */
-    box-shadow: 0 0 15px #0044ff, inset 0 0 10px #002288;
-    border-color: #0044ff;
+    /* Mocny, głęboki niebieski bazowy */
+    box-shadow: 0 0 15px #0055ff, inset 0 0 10px #0022cc;
+    border-color: #0055ff;
   }
   50% {
-    /* Powolne wysunięcie potężnego, jasnoniebieskiego i szafirowego blasku */
-    box-shadow: 0 0 40px #0088ff, inset 0 0 25px #00ccff;
-    border-color: #00aaff; /* Krawędź na moment rozbłyska jasną magią */
+    /* Potężne wysunięcie jasnego, lodowego i jaskrawego błękitu */
+    box-shadow: 0 0 45px #00d2ff, inset 0 0 25px #00ffff;
+    border-color: #00d2ff; /* Krawędź mocno błyska lodowym neonem */
   }
   100% {
-    box-shadow: 0 0 15px #0044ff, inset 0 0 10px #002288;
-    border-color: #0044ff;
+    box-shadow: 0 0 15px #0055ff, inset 0 0 10px #0022cc;
+    border-color: #0055ff;
   }
 }
 .ramka-iskry {
-  /* Powolny, dostojny i drapieżny ruch smoczej energii */
-  animation: smoczyBanerNiebieski 2.5s infinite ease-in-out !important;
+  /* Dostojne, płynne i smocze tempo pulsowania lodowej aury */
+  animation: lodowySmok 2.5s infinite ease-in-out !important;
 }
 </style>
+
 
 
 
@@ -149,7 +150,7 @@
 <!-- ULTRA-WĄSKI BANER OD KRAWĘDZI DO KRAWĘDZI (WYSOKOŚĆ OK. 3.5CM) -->
 <div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -45px; box-sizing: border-box; position: relative; overflow: hidden; background: #ff0000; box-shadow: 0 0 35px #ff0000, inset 0 0 25px #ff0000;">
     <!-- Potężny, czerwony pasek neonowy na wszystkich 4 krawędziach -->
-<div class="ramka-iskry" style="position: absolute; top: 2px; bottom: 2px; left: 0; right: 0; border: 4px solid #0044ff; pointer-events: none; z-index: 2;"></div>
+    <div class="ramka-iskry" style="position: absolute; top: 2px; bottom: 2px; left: 0; right: 0; border: 4px solid #0055ff; pointer-events: none; z-index: 2;"></div>
 
 
     <!-- Twoje zdjęcie pobierane z linku - docięte do połowy ekranu i błyszczące -->
