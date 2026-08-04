@@ -101,25 +101,25 @@
 <link rel="canonical" href="https://kilej.github.io/" />
     
 
-    <style>
-@keyframes pulsowanieRamki {
+<style>
+@keyframes smoczyBaner {
   0% {
-    box-shadow: 0 0 15px #ff0000, inset 0 0 10px #ff0000;
-    border-color: #ff0000;
+    box-shadow: 0 0 15px #cc0000, inset 0 0 10px #7a0000;
+    border-color: #cc0000;
   }
   50% {
-    /* Ramka wysuwa mocny, szeroki blask na zewnątrz i do środka */
-    box-shadow: 0 0 40px #ff3333, inset 0 0 25px #ffea00;
-    border-color: #ffea00; /* Krawędź na moment błyska na żółto-złoty kolor */
+    /* Powolne, płynne wysunięcie głębokiej czerwieni i dymnego złota */
+    box-shadow: 0 0 35px #e60000, inset 0 0 20px #996600;
+    border-color: #b32400; /* Kolor krawędzi przechodzi w ciemny ogień */
   }
   100% {
-    box-shadow: 0 0 15px #ff0000, inset 0 0 10px #ff0000;
-    border-color: #ff0000;
+    box-shadow: 0 0 15px #cc0000, inset 0 0 10px #7a0000;
+    border-color: #cc0000;
   }
 }
 .ramka-iskry {
-  /* Bardzo szybka animacja wysuwania i świecenia (0.2 sekundy) */
-  animation: pulsowanieRamki 0.2s infinite ease-in-out !important;
+  /* Zdecydowane zwolnienie do 2.5 sekundy - płynny, potężny ruch */
+  animation: smoczyBaner 2.5s infinite ease-in-out !important;
 }
 </style>
 
@@ -147,7 +147,7 @@
 <!-- ULTRA-WĄSKI BANER OD KRAWĘDZI DO KRAWĘDZI (WYSOKOŚĆ OK. 3.5CM) -->
 <div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -45px; box-sizing: border-box; position: relative; overflow: hidden; background: #ff0000; box-shadow: 0 0 35px #ff0000, inset 0 0 25px #ff0000;">
     <!-- Potężny, czerwony pasek neonowy na wszystkich 4 krawędziach -->
-    <div class="ramka-iskry" style="position: absolute; top: 2px; bottom: 2px; left: 0; right: 0; border: 4px solid #ff0000; pointer-events: none; z-index: 2;"></div>
+    <div class="ramka-iskry" style="position: absolute; top: 2px; bottom: 2px; left: 0; right: 0; border: 4px solid #cc0000; pointer-events: none; z-index: 2;"></div>
 
 
     <!-- Twoje zdjęcie pobierane z linku - docięte do połowy ekranu i błyszczące -->
