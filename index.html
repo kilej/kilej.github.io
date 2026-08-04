@@ -99,6 +99,33 @@
 </script>
 <link rel="stylesheet" href="assets/css/style.css?v=2">
 <link rel="canonical" href="https://kilej.github.io/" />
+
+    <style>
+@keyframes ognie {
+  0% {
+    background-position: 0 0, 10px 15px, 20px 5px, 5px 25px;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 15px 30px, 30px 10px, 10px 20px, 25px 5px;
+  }
+  100% {
+    background-position: 30px 60px, 60px 20px, 20px 40px, 50px 10px;
+    filter: hue-rotate(15deg);
+  }
+}
+.ramka-iskry {
+  background-image: 
+    radial-gradient(circle, #fff 8%, transparent 15%),
+    radial-gradient(circle, #ffea00 12%, transparent 20%),
+    radial-gradient(circle, #fff 8%, transparent 15%),
+    radial-gradient(circle, #ffea00 12%, transparent 20%) !important;
+  background-size: 20px 20px, 30px 30px, 25px 25px, 35px 35px !important;
+  animation: ognie 0.25s linear infinite !important;
+}
+</style>
+
+    
 </head>
 <body>
 <div class="sound-rec-container">
@@ -121,8 +148,8 @@
 <!-- ULTRA-WĄSKI BANER OD KRAWĘDZI DO KRAWĘDZI (WYSOKOŚĆ OK. 3.5CM) -->
 <div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -28px; box-sizing: border-box; position: relative; overflow: hidden; background: #ff0000; box-shadow: 0 0 35px #ff0000, inset 0 0 25px #ff0000;">
     <!-- Potężny, czerwony pasek neonowy na wszystkich 4 krawędziach -->
-    <div style="position: absolute; top: 2px; bottom: 2px; left: 0; right: 0; border: 3px solid #ff0000; pointer-events: none; z-index: 2; box-shadow: 0 0 20px #ff0000;"></div>
-    
+    <div class="ramka-iskry" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; border: 5px solid #ff0000; pointer-events: none; z-index: 2; box-shadow: 0 0 35px #ff0000, inset 0 0 15px #ffea00;"></div>
+
 
     <!-- Twoje zdjęcie pobierane z linku - docięte do połowy ekranu i błyszczące -->
     <img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/assets/css/Ki%C5%82ej-oficjalne-zdjecie-prasowe%20i%20Knowledge%20panel.png" 
