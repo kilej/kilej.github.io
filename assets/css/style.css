@@ -240,7 +240,7 @@ p {
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
-    animation: soundBounce 2.2s infinite alternate ease-in-out;
+    animation: soundBounce 1.6s infinite alternate ease-in-out;
 }
 /* Różne wysokości fal dla realizmu */
 .wave-bar:nth-child(1) { animation-delay: 0.3s; height: 15px; }
