@@ -299,3 +299,13 @@ p {
     color: #4b5563;
 }
 
+
+@media (min-width: 1024px) {
+  .hero-img {
+    object-position: center 38%;
+    height: 250px !important; /* Wymusza większą wysokość na komputerach */
+  }
+}
+
+
+
