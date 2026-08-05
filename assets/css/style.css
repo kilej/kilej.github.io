@@ -299,22 +299,20 @@ p {
     color: #4b5563;
 }
 
-
-
-  
-}
-@media (min-width: 1024px) {
-  .klasa-foto-artysty {
-    object-position: center 35% !important;
-  }
-}
-
+/* Ustawienia obrazka dla komputerów i dużych ekranów */
 body {
-  background-size: 100% 100% !important;
+  background-size: contain !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
+  background-color: #1a1a1a !important; /* Ciemne tło po bokach zdjęcia na komputerze */
 }
 
-
+/* Ustawienia dla telefonów (ekrany mniejsze niż 768 pikseli) */
+@media (max-width: 768px) {
+  body {
+    background-size: cover !important;
+    background-position: center top !important; /* Na telefonie zdjęcie wypełni cały ekran od góry */
+  }
+}
 
