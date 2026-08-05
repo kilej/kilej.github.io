@@ -130,30 +130,33 @@
   }
 }
 
-/* Ta klasa perfekcyjnie zamyka i wyrównuje zdjęcie w błyszczących krawędziach */
+/* Ta klasa unosi ramkę do góry i idealnie blokuje zdjęcie wewnątrz */
 .ramka-iskry {
   border: 4px solid #0055ff;
   box-sizing: border-box !important;
   animation: blyskRamki 4s infinite ease-in-out;
   display: block;
-  max-width: 100% !important;
-  width: 100% !important;
+  max-width: 96% !important; /* Margines bezpieczeństwa z boku */
+  width: 96% !important;
   height: auto !important;
-  overflow: hidden !important;
+  overflow: hidden !important; /* Bezwzględne obcięcie wystających krawędzi fotki */
   padding: 0 !important;
-  margin: 0 auto !important;
+  margin: -12px auto 0 auto !important; /* Przesunięcie całej ramki o kilka mm wyżej */
+  border-radius: 4px; /* Delikatne zaokrąglenie, by zdjęcie nie uciekało w rogach */
 }
 
-/* Wymuszenie na samym obrazku, aby NIGDY nie wystawał poza krawędź */
+/* Wymuszenie na samym obrazku, aby wypełniał ramkę i nigdzie nie wystawał */
 .ramka-iskry img {
   width: 100% !important;
   height: auto !important;
   display: block !important;
   max-width: 100% !important;
   margin: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 </style>
+
 
 
 
