@@ -130,32 +130,37 @@
   }
 }
 
-/* Ta klasa unosi ramkę do góry i idealnie blokuje zdjęcie wewnątrz */
+/* Ta klasa staje się klatką, która siłą centruje zdjęcie i odcina wszystko na dole i z lewej */
 .ramka-iskry {
-  border: 4px solid #0055ff;
+  border: 4px solid #0055ff !important;
   box-sizing: border-box !important;
-  animation: blyskRamki 4s infinite ease-in-out;
-  display: block;
-  max-width: 96% !important; /* Margines bezpieczeństwa z boku */
-  width: 96% !important;
-  height: auto !important;
-  overflow: hidden !important; /* Bezwzględne obcięcie wystających krawędzi fotki */
+  animation: blyskRamki 4s infinite ease-in-out !important;
+  display: flex !important;          /* Włączamy automatyczne wyrównywanie */
+  justify-content: center !important; /* Centrowanie w poziomie */
+  align-items: center !important;     /* Centrowanie w pionie */
+  overflow: hidden !important;        /* Ostateczne obcięcie dołu i lewej strony zdjęcia */
+  width: 90% !important;              /* Bezpieczna szerokość na telefonie */
+  max-width: 450px !important;        /* Maksymalny rozmiar ramki */
+  margin: 15px auto !important;       /* Wyśrodkowanie na ekranie z ładnym odstępem */
   padding: 0 !important;
-  margin: -12px auto 0 auto !important; /* Przesunięcie całej ramki o kilka mm wyżej */
-  border-radius: 4px; /* Delikatne zaokrąglenie, by zdjęcie nie uciekało w rogach */
+  position: relative !important;
+  height: auto !important;
 }
 
-/* Wymuszenie na samym obrazku, aby wypełniał ramkę i nigdzie nie wystawał */
+/* Bezwzględne zmuszenie zdjęcia do zostania WENĄTRZ ramki */
 .ramka-iskry img {
   width: 100% !important;
   height: auto !important;
   display: block !important;
   max-width: 100% !important;
-  margin: 0 !important;
+  position: static !important;        /* Resetuje pozycjonowanie absolutne, jeśli tam było */
+  margin: 0 !important;               /* Kasuje przesunięcia w lewo/dół */
   padding: 0 !important;
+  transform: none !important;         /* Kasuje ewentualne obracanie lub krzywienie zdjęcia */
   box-sizing: border-box !important;
 }
 </style>
+
 
 
 
