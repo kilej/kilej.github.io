@@ -104,25 +104,24 @@
 <style>
 @keyframes lodowySmok {
   0% {
-    /* Mocny, głęboki niebieski bazowy */
-    box-shadow: 0 0 15px #0055ff, inset 0 0 10px #0022cc;
-    border-color: #0055ff;
+    /* Początkowy głęboki błękit */
+    box-shadow: 0 0 35px #0026ff, inset 0 0 25px #000bb3;
   }
   50% {
-    /* Potężne wysunięcie jasnego, lodowego i jaskrawego błękitu */
-    box-shadow: 0 0 45px #00d2ff, inset 0 0 25px #00ffff;
-    border-color: #00d2ff; /* Krawędź mocno błyska lodowym neonem */
+    /* Maksymalny błysk w trzech kolorach (błękit, jaskrawy cyjan, fiolet/neon) */
+    box-shadow: 0 0 60px #00f0ff, 0 0 30px #7f00ff, inset 0 0 45px #0011ff;
   }
   100% {
-    box-shadow: 0 0 15px #0055ff, inset 0 0 10px #0022cc;
-    border-color: #0055ff;
+    /* Powrót do stanu początkowego */
+    box-shadow: 0 0 35px #0026ff, inset 0 0 25px #000bb3;
   }
 }
+
 .ramka-iskry {
-  /* Dostojne, płynne i smocze tempo pulsowania lodowej aury */
-  animation: lodowySmok 2.5s infinite ease-in-out !important;
+  /* Usunęliśmy stąd starą animację, ponieważ dopisałeś ją bezpośrednio w divie */
 }
 </style>
+
 
 
 
@@ -146,7 +145,7 @@
     </div>
 </div>
     
-<div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -28px; box-sizing: border-box; position: relative; overflow: hidden; background: radial-gradient(circle, #001133 0%, #000511 100%); box-shadow: 0 0 35px #0055ff, inset 0 0 25px #0022cc; animation: lodowySmok 4s infinite ease-in-out;">
+<div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -28px; box-sizing: border-box; position: relative; overflow: hidden; background: radial-gradient(circle, #0011ff 0%, #00021a 100%); box-shadow: 0 0 35px #0026ff, inset 0 0 25px #000bb3; animation: lodowySmok 4s infinite ease-in-out;">
 
     
 
