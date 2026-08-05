@@ -299,13 +299,7 @@ p {
     color: #4b5563;
 }
 
-/* RESPONSYWNOŚĆ (Dostosowanie do małych ekranów telefonów) */
-@media (max-width: 600px) {
-    .artist-name { font-size: 2.3rem; letter-spacing: 4px; }
-    .artist-subtitle { font-size: 0.85rem; letter-spacing: 2px; }
-    .bio-section { padding: 25px; }
-    .bio-section h2 { font-size: 1.3rem; }
-    .bio-section p { font-size: 0.95rem; }
+
 
   
 }
@@ -314,4 +308,12 @@ p {
     object-position: center 35% !important;
   }
 }
+
+body {
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
 
