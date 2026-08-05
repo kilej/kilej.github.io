@@ -104,25 +104,41 @@
 <style>
 @keyframes lodowySmok {
   0% {
-    box-shadow: 0 0 35px #003399, inset 0 0 25px #002266;
-    border-color: #003399;
+    box-shadow: 0 0 35px #0055ff, inset 0 0 25px #0022cc;
   }
   50% {
-    box-shadow: 0 0 60px #00f0ff, 0 0 30px #7f00ff, inset 0 0 45px #0044aa;
-    border-color: #00d2ff;
+    box-shadow: 0 0 65px #00d2ff, 0 0 35px #7f00ff, inset 0 0 45px #001133;
   }
   100% {
-    box-shadow: 0 0 35px #003399, inset 0 0 25px #002266;
-    border-color: #003399;
+    box-shadow: 0 0 35px #0055ff, inset 0 0 25px #0022cc;
   }
 }
 
-div[style*="lodowySmok"] {
-  overflow: visible !important; 
-  border: 4px solid #003399;
+@keyframes blyskRamki {
+  0% {
+    box-shadow: 0 0 15px #0055ff;
+    border-color: #0055ff;
+  }
+  50% {
+    box-shadow: 0 0 35px #00d2ff, 0 0 15px #7f00ff;
+    border-color: #00d2ff;
+  }
+  100% {
+    box-shadow: 0 0 15px #0055ff;
+    border-color: #0055ff;
+  }
+}
+
+.ramka-iskry {
+  border: 4px solid #0055ff;
   box-sizing: border-box;
+  animation: blyskRamki 4s infinite ease-in-out;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 </style>
+
 
 
 
@@ -149,7 +165,7 @@ div[style*="lodowySmok"] {
     </div>
 </div>
     
-<div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -28px; box-sizing: border-box; position: relative; overflow: hidden; background: radial-gradient(circle, #0044aa 0%, #001133 100%); box-shadow: 0 0 35px #003399, inset 0 0 25px #002266; animation: lodowySmok 4s infinite ease-in-out;">
+<div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -28px; box-sizing: border-box; position: relative; overflow: hidden; background: radial-gradient(circle, #001133 0%, #000511 100%); box-shadow: 0 0 35px #0055ff, inset 0 0 25px #0022cc; animation: lodowySmok 4s infinite ease-in-out;">
 
     
 
