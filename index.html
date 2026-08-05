@@ -170,14 +170,9 @@
 
 <style>
   @media (min-width: 1024px) {
-    /* Nadpisuje 130px i wymusza większą wysokość ramki na komputerach */
-    .hero-box-container {
+    /* Szuka pierwszego diva (linii 160) stojącego obok tej sekcji style i powiększa go */
+    div:has(> .ramka-iskry) {
       height: 250px !important;
-    }
-    /* Rozciąga zdjęcie w dół, żeby wypełniło nową przestrzeń */
-    .hero-img-desktop {
-      height: 100% !important;
-      object-position: center 38% !important;
     }
   }
 </style>
