@@ -102,67 +102,10 @@
     
 
 
-<style>
-@keyframes lodowySmok {
-  0% {
-    box-shadow: 0 0 35px #0055ff, inset 0 0 25px #0022cc;
-  }
-  50% {
-    box-shadow: 0 0 65px #00d2ff, 0 0 35px #7f00ff, inset 0 0 45px #001133;
-  }
-  100% {
-    box-shadow: 0 0 35px #0055ff, inset 0 0 25px #0022cc;
-  }
-}
-
-@keyframes blyskRamki {
-  0% {
-    box-shadow: 0 0 15px #0055ff, inset 0 0 10px #0022cc;
-    border-color: #0055ff;
-  }
-  50% {
-    box-shadow: 0 0 35px #00d2ff, 0 0 15px #7f00ff, inset 0 0 20px #001133;
-    border-color: #00d2ff;
-  }
-  100% {
-    box-shadow: 0 0 15px #0055ff, inset 0 0 10px #0022cc;
-    border-color: #0055ff;
-  }
-}
-
-/* Ta klasa staje się klatką, która siłą centruje zdjęcie i odcina wszystko na dole i z lewej */
-.ramka-iskry {
-  border: 4px solid #0055ff !important;
-  box-sizing: border-box !important;
-  animation: blyskRamki 4s infinite ease-in-out !important;
-  display: flex !important;          /* Włączamy automatyczne wyrównywanie */
-  justify-content: center !important; /* Centrowanie w poziomie */
-  align-items: center !important;     /* Centrowanie w pionie */
-  overflow: hidden !important;        /* Ostateczne obcięcie dołu i lewej strony zdjęcia */
-  width: 90% !important;              /* Bezpieczna szerokość na telefonie */
-  max-width: 450px !important;        /* Maksymalny rozmiar ramki */
-  margin: 15px auto !important;       /* Wyśrodkowanie na ekranie z ładnym odstępem */
-  padding: 0 !important;
-  position: relative !important;
-  height: auto !important;
-}
-
-/* Bezwzględne zmuszenie zdjęcia do zostania WENĄTRZ ramki */
-.ramka-iskry img {
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  max-width: 100% !important;
-  position: static !important;        /* Resetuje pozycjonowanie absolutne, jeśli tam było */
-  margin: 0 !important;               /* Kasuje przesunięcia w lewo/dół */
-  padding: 0 !important;
-  transform: none !important;         /* Kasuje ewentualne obracanie lub krzywienie zdjęcia */
-  box-sizing: border-box !important;
-}
-</style>
-
-
-
+    
+<div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -45px; box-sizing: border-box; position: relative; overflow: hidden; background: #ff0000; box-shadow: 0 0 35px #ff0000, inset 0 0 25px #ff0000;">
+    <!-- Potężny, czerwony pasek neonowy na wszystkich 4 krawędziach -->
+    <div style="width: 100vw; margin-left: calc(-50vw + 50%); height: 130px; margin-top: 28px; margin-bottom: -28px; box-sizing: border-box; position: relative; overflow: hidden; background: radial-gradient(circle, #001133 0%, #000511 100%); box-shadow: 0 0 35px #0055ff, inset 0 0 25px #0022cc; animation: lodowySmok 4s infinite ease-in-out;">
 
 
 
