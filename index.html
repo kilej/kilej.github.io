@@ -101,31 +101,29 @@
 <link rel="canonical" href="https://kilej.github.io/" />
     
 
-    <style>
+<style>
 @keyframes lodowySmok {
   0% {
-    /* Początkowy stan z Twojego nowego kodu */
     box-shadow: 0 0 35px #003399, inset 0 0 25px #002266;
-    border-color: #0055ff;
+    border-color: #003399;
   }
   50% {
-    /* Potężny, połączony rozbłysk trzech kolorów i neonowej krawędzi */
     box-shadow: 0 0 60px #00f0ff, 0 0 30px #7f00ff, inset 0 0 45px #0044aa;
     border-color: #00d2ff;
   }
   100% {
-    /* Płynny powrót do bazy */
     box-shadow: 0 0 35px #003399, inset 0 0 25px #002266;
-    border-color: #0055ff;
+    border-color: #003399;
   }
 }
 
-.ramka-iskry {
-  /* Ta klasa dba o to, by fizyczna ramka wokół zdjęcia również reagowała na błysk */
-  border: 4px solid transparent;
-  transition: border-color 0.5s ease;
+div[style*="lodowySmok"] {
+  overflow: visible !important; 
+  border: 4px solid #003399;
+  box-sizing: border-box;
 }
 </style>
+
 
 
 
