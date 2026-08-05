@@ -299,12 +299,3 @@ p {
     color: #4b5563;
 }
 
-/* Jednolite ustawienia tła dla komputerów i telefonów */
-body {
-  background-size: contain !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  background-color: #1a1a1a !important; /* Ten sam szary kolor na każdym urządzeniu */
-}
-
