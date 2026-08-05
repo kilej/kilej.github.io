@@ -306,4 +306,12 @@ p {
     .bio-section { padding: 25px; }
     .bio-section h2 { font-size: 1.3rem; }
     .bio-section p { font-size: 0.95rem; }
+
+  
 }
+@media (min-width: 1024px) {
+  .klasa-foto-artysty {
+    object-position: center 35% !important;
+  }
+}
+
