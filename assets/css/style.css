@@ -215,16 +215,17 @@ text-align: justify;
 
 / Pulsujący i przesuwający się napis REC */
 .rec-badge {
-font-size: 0.9rem;
-font-weight: 900;
-color: #c93b43;
-letter-spacing: 2px;
-display: inline-flex !important;
-align-items: center;
-gap: 6px;
-animation: textPulse 0,5s infinite ease-in-out;
-mix-blend-mode: overlay;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: #c93b43;
+  letter-spacing: 2px;
+  display: inline-block !important; /* Zamiana flex na blok liniowy */
+  line-height: 1 !important;        /* Wymuszenie stałej wysokości linii tekstu */
+  vertical-align: middle !important; /* Idealne wyrównanie w pionie */
+  animation: textPulse 0.5s infinite ease-in-out;
+  mix-blend-mode: overlay;
 }
+
 
 @keyframes marqueeRec {
   0% { transform: translateY(0) translateX(-20px); }
