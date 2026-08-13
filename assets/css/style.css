@@ -35,7 +35,10 @@ ul li a {
     border-radius: 0;
     border: none;
     max-width: 100%;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+  margin-bottom: 30px !important;
+    
+
 }
 .biografia-kontener {
     background: rgba(0, 0, 0, 0.6); 
