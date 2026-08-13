@@ -227,8 +227,8 @@ text-align: justify;
 
 
 @keyframes marqueeRec {
-  0% { transform: translateY(0) translateX(-20px); }
-  100% { transform: translateY(0) translateX(25px); }
+  0% { transform: translateY(0) translateX(0px); }
+  100% { transform: translateY(0) translateX(10px); }
 }
 
 @keyframes textPulse {
