@@ -194,18 +194,23 @@ text-align: justify;
 }
 /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
  .sound-rec-container {
-    position: fixed !important;
-   /* Przypina element na stałe do ekranu, ignorując tekst strony */
-    top: 5px;               /* Bezpieczny, mały odstęp od samej górnej krawędzi wyświetlacza */
-    left: 15px;              /* Lekkie odsunięcie od lewej krawędzi ekranu */
+    position: fixed !important;   /* Panel będzie leciał w dół z ekranem */
+    top: 5px;                    /* Odstęp od góry */
+    left: 15px;                   /* Odstęp od lewej */
+    display: flex !important;     /* Układ elastyczny w poziomie */
+    flex-direction: row !important; /* Wymusza układ lewo / prawo */
+    align-items: center !important; /* Wyrównuje wszystko w jednej linii w pionie */
+    gap: 12px;                    /* Odstęp między lewą falą, REC i prawą falą */
+    z-index: -15 !important;     /* Panel będzie zawsze na wierzchu strony */
+}
+
+/* Wymusza układ poziomy dla pojedynczych pasków w grupie fal */
+.wave-group {
     display: flex !important;
-   flex-direction: row !important;
-   align-items: center !important;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    z-index: -15;    /* Gwarantuje, że nic nie przykryje fal */
- }
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 3px;                     /* Odstęp między słupkami fali */
+}
 /* Pulsujący i przesuwający się napis REC */
 .rec-badge {
     font-size: 0.9rem;
