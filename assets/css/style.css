@@ -266,7 +266,7 @@ p {
 /* Pojedynczy słupek fali */
 .wave-bar {
     width: 3px;
-    height: 20px;            /* Lekko zwiększona wysokość dla lepszego efektu */
+    height: 10px;            /* Lekko zwiększona wysokość dla lepszego efektu */
     background: linear-gradient(to top, #4ea8de, #b4222b);
     border-radius: 2px;
     display: inline-block;
