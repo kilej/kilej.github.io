@@ -237,6 +237,11 @@ text-align: justify;
 50% { opacity: 0; }
 100% { opacity: 1; }
 }
+@keyframes strictPulse {
+  0% { opacity: 1; transform: none; }
+  50% { opacity: 0.1; transform: none; }
+  100% { opacity: 1; transform: none; }
+}
 
   h1 {
     position: relative;
