@@ -227,9 +227,10 @@ mix-blend-mode: overlay;
 }
 
 @keyframes marqueeRec {
-0% { transform: translateX(-20px); }
-100% { transform: translateX(250px); }
+  0% { transform: translateY(0) translateX(-20px); }
+  100% { transform: translateY(0) translateX(25px); }
 }
+
 @keyframes textPulse {
 0% { opacity: 1; }
 38% { opacity: 0; }
