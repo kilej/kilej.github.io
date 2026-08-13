@@ -205,11 +205,13 @@ text-align: justify;
 }
 
 /* Wymusza układ poziomy dla pojedynczych pasków w grupie fal */
-.wave-group {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 3px;                     /* Odstęp między słupkami fali */
+       .wave-group {
+    display: flex;
+    flex-direction: row; /* Ta linia wymusi układ w poziomie */
+    align-items: flex-end;
+    gap: 4px;
+    overflow: hidden;
+    animation: waveReveal 5s ease-in-out;
 }
 /* Pulsujący i przesuwający się napis REC */
 .rec-badge {
