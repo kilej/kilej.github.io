@@ -191,7 +191,7 @@ text-align: justify;
 }
 /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
  .sound-rec-container {
-    position: fixed;
+    position: absolute !important;
    /* Przypina element na stałe do ekranu, ignorując tekst strony */
     top: 5px;               /* Bezpieczny, mały odstęp od samej górnej krawędzi wyświetlacza */
     left: 15px;              /* Lekkie odsunięcie od lewej krawędzi ekranu */
