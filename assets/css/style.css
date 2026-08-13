@@ -270,7 +270,7 @@ p {
     background: linear-gradient(to top, #4ea8de, #b4222b);
     border-radius: 2px;
     display: inline-block;
-    transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
+    transform-origin: center;   Ważne: paski będą rosły od dołu do góry */
     animation: soundBounce 2.5s infinite alternate ease-in-out;
 }
 /* Różne wysokości fal dla realizmu */
