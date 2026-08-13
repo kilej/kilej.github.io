@@ -304,6 +304,7 @@ p {
   .hero-img {
     object-position: center 38%;
     height: 250px !important; /* Wymusza większą wysokość na komputerach */
+    margin: 30px auto;.
   }
 }
 
