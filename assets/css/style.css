@@ -97,7 +97,7 @@ h2 {
   font-weight: 100;     
   letter-spacing: 1px;   
   text-transform: uppercase; 
-    @media (min-width: 768px) {
+    @media (min-width: 500px) {
   .maly-tekst {
     display: none !important;
   }
