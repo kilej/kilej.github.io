@@ -310,28 +310,13 @@ p {
 
 
 
-/* Odstępy dla wszystkich nagłówków (Dyskografia, Prywatne Kileja, Poniżej) */
-h3, h4 {
+/* Globalne odstępy dla wszystkich elementów tekstowych i multimedialnych na stronie */
+main h1, main h2, main h3, main h4, main p, main ul {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
-  display: block !important;
 }
 
-/* Odstępy pod listą linków i listą albumów */
-ul {
-  margin-bottom: 30px !important;
-}
-
-/* Odstępy dla pojedynczych elementów listy (albumy: MwS, W zakazanym...) */
-ul li {
+/* Dodatkowy luz pomiędzy elementami listy (np. albumami w dyskografii) */
+main ul li {
   margin-bottom: 15px !important;
 }
-
-/* Wymuszenie odstępów dla tekstu informacyjnego o przesuwaniu palcem */
-h4.maly-tekst {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-  line-height: 1.6 !important;
-}
-
-
