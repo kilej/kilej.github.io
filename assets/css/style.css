@@ -217,7 +217,7 @@ text-align: justify;
 .rec-badge {
   font-size: 0.9rem;
   font-weight: 900;
-  color: #c93b43;
+  color: #c93b43 !important;
   letter-spacing: 2px;
   display: inline-block !important; /* Zamiana flex na blok liniowy */
   vertical-align: middle !important; /* Idealne wyrównanie w pionie */
