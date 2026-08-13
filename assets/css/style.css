@@ -192,6 +192,7 @@ text-align: justify;
     .bio-section h2 { font-size: 1.3rem; }
     .bio-section p { font-size: 0.95rem; }
 }
+
 /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" /
 .sound-rec-container {
   position: fixed;
@@ -199,10 +200,13 @@ text-align: justify;
   left: 15px;
   display: flex !important;
   flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end !important;
   align-items: center !important;
   gap: 12px;
   z-index: -15;
 }
+
 
 / Pulsujący i przesuwający się napis REC */
 .rec-badge {
