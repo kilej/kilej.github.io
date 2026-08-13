@@ -100,7 +100,7 @@ h2 {
 }
 
 /* Ukrywa tekst na wszystkim, co jest szersze niż pionowy telefon */
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .maly-tekst {
     display: none !important;
   }
