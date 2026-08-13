@@ -289,7 +289,7 @@ p {
 /* ANIMACJA 1: Skakanie pasków góra/dół */
 @keyframes soundBounce {
   0% { transform: scaleY(0.6); }   /* Pasek nie skurczy się tak bardzo, więc góra zachowa zaokrąglenie */
-  100% { transform: scaleY(1.3); } /* Górny pułap ruchu */
+  100% { transform: scaleY(1.0); } /* Górny pułap ruchu */
 }
 
 
