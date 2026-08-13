@@ -310,17 +310,6 @@ p {
   }
 }
 
-/* Jednolite ustawienia tła dla komputerów i telefonów */
-body {
-  background-size: contain !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  background-color: #1a1a1a !important; /* Ten sam szary kolor na każdym urządzeniu */
-}
-
-
-
 /* Globalne odstępy dla wszystkich elementów tekstowych i multimedialnych na stronie */
 main h1, main h2, main h3, main h4, main p, main ul, .slider {
   margin-top: 30px !important;
