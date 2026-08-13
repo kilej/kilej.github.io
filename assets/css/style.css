@@ -192,50 +192,41 @@ text-align: justify;
     .bio-section h2 { font-size: 1.3rem; }
     .bio-section p { font-size: 0.95rem; }
 }
-/* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
- .sound-rec-container {
-    position: fixed !important;   /* Panel będzie leciał w dół z ekranem */
-    top: 5px;                    /* Odstęp od góry */
-    left: 15px;                   /* Odstęp od lewej */
-    display: flex !important;     /* Układ elastyczny w poziomie */
-    flex-direction: row !important; /* Wymusza układ lewo / prawo */
-    align-items: center !important; /* Wyrównuje wszystko w jednej linii w pionie */
-    gap: 12px;                    /* Odstęp między lewą falą, REC i prawą falą */
-    z-index: -15 !important;     /* Panel będzie zawsze na wierzchu strony */
+/* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" /
+.sound-rec-container {
+position: fixed;
+/ Przypina element na stałe do ekranu, ignorując tekst strony /
+top: 5px; / Bezpieczny, mały odstęp od samej górnej krawędzi wyświetlacza /
+left: 15px; / Lekkie odsunięcie od lewej krawędzi ekranu /
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+z-index: -15; / Gwarantuje, że nic nie przykryje fal /
 }
-
-/* Wymusza układ poziomy dla pojedynczych pasków w grupie fal */
-       .wave-group {
-    display: flex;
-    flex-direction: row; /* Ta linia wymusi układ w poziomie */
-    align-items: flex-end;
-    gap: 4px;
-    overflow: hidden;
-    animation: waveReveal 5s ease-in-out;
-}
-/* Pulsujący i przesuwający się napis REC */
+/ Pulsujący i przesuwający się napis REC */
 .rec-badge {
-    font-size: 0.9rem;
-    font-weight: 900;
-    color: #c93b43;
-    letter-spacing: 2px;
-    display: flex !important;
-  flex-direction: row !important;
-    align-items: center;
-    gap: 6px;
-    animation: textPulse 0,5s infinite ease-in-out;
-  mix-blend-mode: overlay;
+font-size: 0.9rem;
+font-weight: 900;
+color: #c93b43;
+letter-spacing: 2px;
+display: flex;
+align-items: center;
+gap: 6px;
+animation: textPulse 0,5s infinite ease-in-out;
+mix-blend-mode: overlay;
 }
 
 @keyframes marqueeRec {
-    0% { transform: translateX(-20px); }
-    100% { transform: translateX(250px); }
+0% { transform: translateX(-20px); }
+100% { transform: translateX(250px); }
 }
-  @keyframes textPulse {
-  0% { opacity: 1; }
-  38% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes textPulse {
+0% { opacity: 1; }
+38% { opacity: 0; }
+100% { opacity: 1; }
 }
+
   h1 {
     position: relative;
     z-index: 10;
@@ -319,7 +310,14 @@ p {
   }
 }
 
-
+/* Jednolite ustawienia tła dla komputerów i telefonów */
+body {
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-color: #1a1a1a !important; /* Ten sam szary kolor na każdym urządzeniu */
+}
 
 
 
