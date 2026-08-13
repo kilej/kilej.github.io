@@ -196,11 +196,10 @@ text-align: justify;
   position: fixed;
   top: 20px;
   left: 15px;
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
+  /* Zmiana układu na flex i idealne centrowanie */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   gap: 12px;
   z-index: -15 !important;
 }
