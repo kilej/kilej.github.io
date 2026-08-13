@@ -222,7 +222,6 @@ text-align: justify;
   display: inline-block !important; /* Zamiana flex na blok liniowy */
   vertical-align: middle !important; /* Idealne wyrównanie w pionie */
     animation: strictPulse 0.5s infinite ease-in-out;
-  mix-blend-mode: normal;
 }
 
 
