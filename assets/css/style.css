@@ -194,15 +194,16 @@ text-align: justify;
 }
 /* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
  .sound-rec-container {
-    position: absolute !important;
+    position: fixed !important;
    /* Przypina element na stałe do ekranu, ignorując tekst strony */
     top: 5px;               /* Bezpieczny, mały odstęp od samej górnej krawędzi wyświetlacza */
     left: 15px;              /* Lekkie odsunięcie od lewej krawędzi ekranu */
-    display: flex;
+    display: flex !important;
+   flex-direction: row !important;
+   align-items: center !important;
     align-items: center;
     justify-content: center;
     gap: 12px;
-   flex-direction: row !important;
     z-index: -15;    /* Gwarantuje, że nic nie przykryje fal */
  }
 /* Pulsujący i przesuwający się napis REC */
