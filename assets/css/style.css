@@ -205,11 +205,11 @@ text-align: justify;
   z-index: -15 !important;
 }
 
-/* Wymuszenie linii dla dzieci kontenera */
 .sound-rec-container > * {
-  display: inline-block !important;
-  float: left !important;
+    white-space: nowrap !important; /* Blokuje skakanie do nowej linii */
 }
+
+
 
 
 
@@ -250,7 +250,7 @@ text-align: justify;
   h1 {
     position: relative;
     z-index: 10;
-    margin-top: 60px; /* To zrobi wolne miejsce na panel REC na samej górze */
+    margin-top: 40px; /* To zrobi wolne miejsce na panel REC na samej górze */
 }
 
 p {
