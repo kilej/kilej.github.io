@@ -241,6 +241,11 @@ text-align: justify;
   50% { opacity: 0.1; transform: none; }
   100% { opacity: 1; transform: none; }
 }
+.rec-badge, .rec-badge * {
+    color: #c93b43 !important;
+    mix-blend-mode: normal !important;
+}
+
 
   h1 {
     position: relative;
