@@ -194,7 +194,7 @@ text-align: justify;
 
 .sound-rec-container {
   position: fixed;
-  top: 5px;
+  top: 12px;
   left: 15px;
   /* Zmiana układu na flex i idealne centrowanie */
     display: flex !important;
