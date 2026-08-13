@@ -222,7 +222,7 @@ text-align: justify;
   display: inline-block !important; /* Zamiana flex na blok liniowy */
   line-height: 1 !important;        /* Wymuszenie stałej wysokości linii tekstu */
   vertical-align: middle !important; /* Idealne wyrównanie w pionie */
-  animation: textPulse 0.5s infinite ease-in-out;
+    animation: strictPulse 0.5s infinite ease-in-out;
   mix-blend-mode: overlay;
 }
 
