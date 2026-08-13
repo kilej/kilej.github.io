@@ -194,7 +194,7 @@ text-align: justify;
 
 .sound-rec-container {
   position: fixed;
-  top: 5px;
+  top: 10px;
   left: 15px;
   display: flex !important;
   flex-direction: row !important;
