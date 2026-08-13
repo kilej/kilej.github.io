@@ -191,9 +191,7 @@ text-align: justify;
     .bio-section { padding: 25px; }
     .bio-section h2 { font-size: 1.3rem; }
     .bio-section p { font-size: 0.95rem; }
-}
 
-/* 3. NOWY KOD DLA FAL DŹWIĘKOWYCH I "REC" */
 .sound-rec-container {
   position: fixed;
   top: 5px;
@@ -201,11 +199,18 @@ text-align: justify;
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
-  justify-content: flex-end !important;
   align-items: center !important;
+  justify-content: flex-start !important;
   gap: 12px;
-  z-index: -15;
+  z-index: 1000 !important;
 }
+
+/* Wymuszenie linii dla dzieci kontenera */
+.sound-rec-container > * {
+  display: inline-block !important;
+  float: left !important;
+}
+
 
 
 / Pulsujący i przesuwający się napis REC */
