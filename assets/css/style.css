@@ -220,7 +220,6 @@ text-align: justify;
   color: #c93b43;
   letter-spacing: 2px;
   display: inline-block !important; /* Zamiana flex na blok liniowy */
-  line-height: 1 !important;        /* Wymuszenie stałej wysokości linii tekstu */
   vertical-align: middle !important; /* Idealne wyrównanie w pionie */
     animation: strictPulse 0.5s infinite ease-in-out;
   mix-blend-mode: overlay;
@@ -264,12 +263,12 @@ p {
 /* Pojedynczy słupek fali */
 .wave-bar {
     width: 3px;
-    height: 18px;            /* Lekko zwiększona wysokość dla lepszego efektu */
+    height: 16px;            /* Lekko zwiększona wysokość dla lepszego efektu */
     background: linear-gradient(to top, #4ea8de, #b4222b);
     border-radius: 2px;
     display: inline-block;
     transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
-    animation: soundBounce 1.6s infinite alternate ease-in-out;
+    animation: soundBounce 2.5s infinite alternate ease-in-out;
 }
 /* Różne wysokości fal dla realizmu */
 .wave-bar:nth-child(1) { animation-delay: 0.2s; height: 13px; }
