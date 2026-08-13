@@ -97,12 +97,12 @@ h2 {
   font-weight: 100;     
   letter-spacing: 1px;   
   text-transform: uppercase; 
-    @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), 
-       (min-width: 768px) and (min-resolution: 192dpi) {
+    @media (min-width: 768px) {
   .maly-tekst {
     display: none !important;
   }
 }
+
        /* 1. RESETOWANIE STARYCH STYLÓW (Usuwa brzydkie ramki z góry) */
 * {
     margin: 0;
