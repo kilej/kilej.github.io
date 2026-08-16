@@ -174,23 +174,23 @@ alt="Kiłej - Oficjalne zdjęcie prasowe"
     
 <style>
 @media (min-width: 700px) {
-  /* Kontener dopasowuje się do naturalnego rozmiaru zdjęcia, nie wymusza wysokości */
+  /* Zmniejsza całą czarną ramkę do 60% szerokości ekranu i ją środkuje */
   .hero-box-container {
-    height: auto !important;
+    width: 60% !important; /* Ramka zajmuje 60% szerokości monitora */
+    height: auto !important; /* Wysokość dopasuje się sama do zawartości */
+    margin: 0 auto !important; /* Środkuje całą ramkę na ekranie komputera */
   }
   
-  /* Zdjęcie zachowuje swoje oryginalne, kwadratowe proporcje z telefonu */
+  /* Zdjęcie idealnie wypełnia zmniejszoną ramkę bez ucinania głowy */
   .hero-img-desktop {
-    width: 100% !important;
-    max-width: 500px !important; /* Blokuje rozciąganie zdjęcia na całą szerokość monitora */
-    height: auto !important;
-    aspect-ratio: auto !important; /* Wyłącza sztuczne proporcje kinowe */
-    object-fit: contain !important; /* Gwarantuje, że zdjęcie wyświetli się w całości */
-    margin: 0 auto !important; /* Środkuje zdjęcie na ekranie komputera */
-    display: block !important;
+    width: 100% !important; /* Zajmuje całą szerokość zmniejszonej ramki */
+    height: auto !important; /* Automatycznie dobiera wysokość, chroniąc kadr */
+    aspect-ratio: auto !important; /* Wyłącza proporcje kinowe */
+    object-fit: contain !important; /* Gwarantuje wyświetlenie całego zdjęcia */
   }
 }
 </style>
+
 
 
 
