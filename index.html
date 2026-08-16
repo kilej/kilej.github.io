@@ -171,27 +171,26 @@
 alt="Kiłej - Oficjalne zdjęcie prasowe"
     style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 12%; position: relative; z-index: 1; filter: contrast(105%) brightness(125%) saturate(105%) drop-shadow(0 0 20px rgba(160, 200, 255, 0.10));">
 </div>
-    
-<style>
+    <style>
 @media (min-width: 700px) {
-  /* Ramka zajmuje 60% szerokości ekranu, a jej wysokość dopasowuje się sama */
+  /* Ramka rozciąga się na pełną szerokość ekranu od lewej do prawej */
   .hero-box-container {
     width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
-    margin: 0 auto !important; /* Środkuje ramkę na ekranie */
+    margin: 0 !important;
   }
   
-  /* Zdjęcie idealnie wypełnia ramkę od brzegu do brzegu i pokazuje głowę */
+  /* Zdjęcie jest bardzo szerokie, ale niskie w pionie */
   .hero-img-desktop {
-    width: 100% !important; /* Wypełnia całe 60% ramki */
-    height: auto !important; /* Pozwala zdjęciu zachować naturalne proporcje */
-    aspect-ratio: 1 / 1 !important; /* Wymusza kwadratowy kształt, dokładnie taki jak na telefonie */
-    object-fit: cover !important; /* Wypełnia ramkę bez zostawiania pustych marginesów */
-    object-position: center top !important; /* Kadruje od czubka głowy, więc jej nie utnie */
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 5 !important; /* Wymusza bardzo niski, panoramiczny pasek */
+    object-fit: cover !important; /* Zdjęcie ładnie wypełnia cały pasek */
+    object-position: center 12% !important; /* Precyzyjnie celuje w głowę i okulary, odcinając dół */
   }
 }
 </style>
-
 
 
 
