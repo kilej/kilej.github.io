@@ -174,19 +174,24 @@ alt="Kiłej - Oficjalne zdjęcie prasowe"
     
 <style>
 @media (min-width: 700px) {
-  /* Powiększa główną czarną ramkę na komputerze */
+  /* Usuwa sztywną wysokość i pozwala ramce rosnąć razem z ekranem */
   .hero-box-container {
-    height: 250px !important;
+    height: auto !important; 
+    min-height: 400px !important; /* Minimalna wysokość na komputerze, możesz ją zwiększyć */
   }
-  /* Wyłącza blokadę proporcji 16/9 i dopasowuje zdjęcie */
+  
+  /* Zdjęcie dopasowuje się do szerokości ekranu, pokazując górną część */
   .hero-img-desktop {
-    aspect-ratio: auto !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Wymusza ładne proporcje bez rozciągania */
-    object-position: center top !important; /* Pokazuje zdjęcie od samej góry, czyli od głowy */
+    width: 100% !important;
+    height: auto !important;
+    min-height: 400px !important; /* Musi być taka sama jak wyżej */
+    object-fit: cover !important;
+    object-position: center top !important; /* Kadruje od czubka głowy */
+    aspect-ratio: 16 / 9 !important; /* Przywraca naturalne proporcje kinowe */
   }
 }
 </style>
+
 
 
 <main>
