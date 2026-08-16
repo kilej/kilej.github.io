@@ -324,7 +324,7 @@ p {
 @media (min-width: 1024px) {
   .hero-img {
     object-position: center 38%;
-    height: 250px !important; /* Wymusza większą wysokość na komputerach */
+    height: 500px !important; /* Wymusza większą wysokość na komputerach */
     margin: 30px auto;.
   }
 }
