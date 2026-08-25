@@ -352,40 +352,73 @@ main ul li {
 
 
 
+.main-footer {
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.main-footer p {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+@media (min-width: 1024px) {
+    .hero-img {
+        object-position: center 38%;
+        height: 250px !important; /* Wymusza większą wysokość na komputerach */
+        margin: 30px auto; /* Naprawiony błąd z dwukropkiem 'auto:;' */
+    }
+}
+
+/* Globalne odstępy dla wszystkich elementów tekstowych i multimedialnych na stronie */
+main h1, main h2, main h3, main h4, main p, main ul, .slider {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+/* Dodatkowy luz pomiędzy elementami listy (np. albumami w dyskografii) */
+main ul li {
+    margin-bottom: 15px !important;
+}
+
+@media screen and (min-width: 1200px) {
+    main p {
+        font-size: 24px !important;
+    }
+}
+
 /* Zmiana wielkości tekstu TYLKO na komputerach (od 1200px szerokości) */
 @media (min-width: 1200px) {
+    
     /* Linia 233 - Tytuł dyskografii (h3 z kolorem) */
     h3[style*="color: #D8EBF5"] {
         font-size: 24px !important;
     }
-
+    
     /* Linie 235-237 - Pozycje na liście albumów */
     ul[style*="padding-left: 20px;"] li {
         font-size: 20px !important;
     }
-
+    
     /* Linia 239 - Tekst ze strzałkami "Poniżej" (pierwszy h4 po liście ul) */
-    ul[style*="padding-left: 24px;"] + h4 {
+    ul[style*="padding-left: 20px;"] + h4 {
         font-size: 22px !important;
     }
-
+    
     /* Linia 240 - Nagłówek "Prywatne Kleja:" (drugi h4 po liście ul) */
-    ul[style*="padding-left: 24px;"] + h4 + h4 {
+    ul[style*="padding-left: 20px;"] + h4 + h4 {
         font-size: 28px !important;
     }
-
+    
     /* Linia 241 - Gwiazdki (trzeci h4 po liście ul - zostają na środku, tylko większe) */
     ul[style*="padding-left: 20px;"] + h4 + h4 + h4 {
         font-size: 24px !important;
     }
-
+    
     /* Linia 243 - Cytat "Nie zawsze było lekko" (h4 z marginesem 0%) */
     h4[style*="margin-left: 0%;"] {
         font-size: 24px !important;
     }
 }
-
-
-
 
 
