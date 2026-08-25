@@ -339,3 +339,14 @@ main h1, main h2, main h3, main h4, main p, main ul, .slider {
 main ul li {
   margin-bottom: 15px !important;
 }
+
+
+
+@media screen and (min-width: 1200px) {
+  main p {
+    font-size: 24px !important;
+  }
+}
+
+
+
