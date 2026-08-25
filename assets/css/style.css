@@ -390,9 +390,11 @@ main ul li {
 /* Zmiana wielkości tekstu TYLKO na komputerach (od 1200px szerokości) */
 @media (min-width: 1200px) {
     
-    /* Linia 233 - Tytuł dyskografii (h3 z kolorem) */
-    h3[style*="color: #D8EBF5"] {
-        font-size: 30px !important;
+    /* Wyszukuje tekst "d8ebf5" bez względu na wielkość liter i format */
+    h3[style*="D8EBF5" i], 
+    h3[style*="d8ebf5" i],
+    h3[style*="216" i][style*="235" i] {
+        font-size: 28px !important;
     }
     
     /* Linie 235-237 - Pozycje na liście albumów */
