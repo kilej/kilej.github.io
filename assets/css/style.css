@@ -402,12 +402,12 @@ main ul li {
     
     /* Linia 239 - Tekst ze strzałkami "Poniżej" (pierwszy h4 po liście ul) */
     ul[style*="padding-left: 20px;"] + h4 {
-        font-size: 22px !important;
+        font-size: 24px !important;
     }
     
     /* Linia 240 - Nagłówek "Prywatne Kleja:" (drugi h4 po liście ul) */
     ul[style*="padding-left: 20px;"] + h4 + h4 {
-        font-size: 28px !important;
+        font-size: 24px !important;
     }
     
     /* Linia 241 - Gwiazdki (trzeci h4 po liście ul - zostają na środku, tylko większe) */
