@@ -1,0 +1,426 @@
+@import url('https://googleapis.com');
+
+.spotify-widget-container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+body {
+  background-image: url("../css/tlo.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0; 
+  padding: 15px;
+  background-color: #121212;
+  color: #ffffff;
+
+ul li a {
+    display: inline-block;
+    padding: 15px 0;
+    color: #00FFCC; 
+}
+ul li a {
+  display: inline-block;
+  padding: 10px 0;
+}
+.biografia-kontener {
+    background: #121212;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: 25px;
+    border-radius: 0;
+    border: none;
+    max-width: 100%;
+    margin-top: 30px !important;
+  margin-bottom: 30px !important;
+    
+
+}
+.biografia-kontener {
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: white;
+}
+h2 {
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0 0 12px #1e90ff, 0 0 5px #000000;
+}
+  h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 26px;          
+    letter-spacing: 0px;    
+    word-spacing: 0px;        
+    padding: 0 10px;  
+    color: #fff9e6 !important;
+      text-shadow: 
+    2px 2px 0px rgba(0, 0, 0, 0.45), 
+    -2px -2px 0px rgba(0, 0, 0, 0.45), 
+    2px -2px 0px rgba(0, 0, 0, 0.45), 
+    -2px 2px 0px rgba(0, 0, 0, 0.45), 
+    4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  width: 100%;
+}
+
+
+.slider img {
+  flex: 0 0 100%;       
+  scroll-snap-align: start;
+  object-fit: cover;   
+  height: 400px;     
+}
+  .maly-tekst {
+  font-size: 5.5vw;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Ukrywa tekst na wszystkim, co jest szersze niż pionowy telefon */
+@media (min-width: 500px) {
+  .maly-tekst {
+    display: none !important;
+  }
+}
+
+
+       /* 1. RESETOWANIE STARYCH STYLÓW (Usuwa brzydkie ramki z góry) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #05050d;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Gwieździste tło strony */
+.stars-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #1a1a3a 0%, #05050d 80%);
+    z-index: -1;
+}
+
+/* Kontener wyrównujący zawartość do środka */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* 2. STYL NAGŁÓWKA (Góra strony) */
+.main-header {
+    padding: 50px 0 20px 0;
+}
+
+.artist-name {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    margin-bottom: 5px;
+}
+
+.artist-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: #8a99ad;
+    font-weight: 700;
+}
+
+
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.bio-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #fff9e6;
+
+  font-family: 'Montserrat', sans-serif;
+text-align: justify;
+    margin-bottom: 20px;
+}
+
+.bio-section p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-section strong {
+    color: #ffffff;
+}
+      .artist-subtitle { font-size: 0.85rem; letter-spacing: 2px; }
+    .bio-section { padding: 25px; }
+    .bio-section h2 { font-size: 1.3rem; }
+    .bio-section p { font-size: 0.95rem; }
+
+.sound-rec-container {
+  position: fixed;
+  top: 12px;
+  left: 15px;
+  /* Zmiana układu na flex i idealne centrowanie */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  gap: 12px;
+  z-index: -15 !important;
+}
+
+.sound-rec-container > * {
+    white-space: nowrap !important; /* Blokuje skakanie do nowej linii */
+}
+
+
+
+
+
+/ Pulsujący i przesuwający się napis REC */
+.rec-badge {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: #c93b43 !important;
+  letter-spacing: 2px;
+  display: inline-block !important; /* Zamiana flex na blok liniowy */
+  vertical-align: middle !important; /* Idealne wyrównanie w pionie */
+    animation: strictPulse 0.5s infinite ease-in-out;
+}
+
+
+@keyframes marqueeRec {
+  0% { transform: translateY(0) translateX(0px); }
+  100% { transform: translateY(0) translateX(10px); }
+}
+
+@keyframes textPulse {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes strictPulse {
+  0% { opacity: 1; transform: none; }
+  50% { opacity: 0.1; transform: none; }
+  100% { opacity: 1; transform: none; }
+}
+.rec-badge, .rec-badge * {
+    color: #c93b43 !important;
+    mix-blend-mode: normal !important;
+}
+
+
+  h1 {
+    position: relative;
+    z-index: 10;
+    margin-top: 40px; /* To zrobi wolne miejsce na panel REC na samej górze */
+}
+
+p {
+    position: relative;
+    z-index: 10;
+}
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #c93b43;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #d9383a;
+}
+
+/* Pojedynczy słupek fali */
+.wave-bar {
+    width: 3px;
+    height: 10px;            /* Lekko zwiększona wysokość dla lepszego efektu */
+    background: linear-gradient(to top, #4ea8de, #b4222b);
+    border-radius: 2px;
+    display: block;
+        transform-origin: bottom; /* Ważne: paski będą rosły od dołu do góry */
+    animation: soundBounce 2.5s infinite alternate ease-in-out;
+}
+/* Różne wysokości fal dla realizmu */
+.wave-bar:nth-child(1) { animation-delay: 0.2s; height: 13px; }
+.wave-bar:nth-child(2) { animation-delay: 0.20s; height: 21px; }
+.wave-bar:nth-child(3) { animation-delay: 0.05s; height: 13px; }
+/* Grupy fal */
+.wave-group {
+    display: flex;
+    align-items: flex-end;   /* Wyrównanie pasków do dołu */
+    gap: 4px;
+    overflow: hidden;
+    animation: waveReveal 5s ease-in-out;
+}
+
+/* ANIMACJA 1: Skakanie pasków góra/dół */
+@keyframes soundBounce {
+  0% { transform: scaleY(0.6); }   /* Pasek nie skurczy się tak bardzo, więc góra zachowa zaokrąglenie */
+  100% { transform: scaleY(1.0); } /* Górny pułap ruchu */
+}
+
+
+/* ANIMACJA 2: Płynne chowanie i wysuwanie fal (używamy max-width zamiast width) */
+@keyframes waveReveal {
+    0% { max-width: 0px; opacity: 0; }
+    20% { max-width: 50px; opacity: 1; }
+    80% { max-width: 50px; opacity: 1; }
+    100% { max-width: 0px; opacity: 0; }
+}
+
+/* ANIMACJA 3: Pulsowanie czerwonego napisu */
+@keyframes textPulse {
+    0% { opacity: 0,7; }
+    50% { opacity: 0.1; }
+    100% { opacity: 0,7; }
+}
+
+
+/* 5. STOPKA STRONY */
+.main-footer {
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.main-footer p {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+
+@media (min-width: 1024px) {
+  .hero-img {
+    object-position: center 38%;
+    height: 250px !important; /* Wymusza większą wysokość na komputerach */
+    margin: 30px auto;.
+  }
+}
+
+/* Globalne odstępy dla wszystkich elementów tekstowych i multimedialnych na stronie */
+main h1, main h2, main h3, main h4, main p, main ul, .slider {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+/* Dodatkowy luz pomiędzy elementami listy (np. albumami w dyskografii) */
+main ul li {
+  margin-bottom: 15px !important;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  main p {
+    font-size: 24px !important;
+  }
+}
+
+
+
+
+
+.main-footer {
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.main-footer p {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+@media (min-width: 1024px) {
+    .hero-img {
+        object-position: center 38%;
+        height: 250px !important; /* Wymusza większą wysokość na komputerach */
+        margin: 30px auto; /* Naprawiony błąd z dwukropkiem 'auto:;' */
+    }
+}
+
+/* Globalne odstępy dla wszystkich elementów tekstowych i multimedialnych na stronie */
+main h1, main h2, main h3, main h4, main p, main ul, .slider {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+/* Dodatkowy luz pomiędzy elementami listy (np. albumami w dyskografii) */
+main ul li {
+    margin-bottom: 15px !important;
+}
+
+@media screen and (min-width: 1200px) {
+    main p {
+        font-size: 24px !important;
+    }
+}
+
+/* Zmiana wielkości tekstu TYLKO na komputerach (od 1200px szerokości) */
+@media (min-width: 1200px) {
+    
+    /* Wyszukuje tekst "d8ebf5" bez względu na wielkość liter i format */
+    h3[style*="D8EBF5" i], 
+    h3[style*="d8ebf5" i],
+    h3[style*="216" i][style*="235" i] {
+        font-size: 28px !important;
+    }
+    
+    /* Linie 235-237 - Pozycje na liście albumów */
+    ul[style*="padding-left: 20px;"] li {
+        font-size: 20px !important;
+    }
+    
+    /* Linia 239 - Tekst ze strzałkami "Poniżej" (pierwszy h4 po liście ul) */
+    ul[style*="padding-left: 20px;"] + h4 {
+        font-size: 24px !important;
+    }
+    
+    /* Linia 240 - Nagłówek "Prywatne Kleja:" (drugi h4 po liście ul) */
+    ul[style*="padding-left: 20px;"] + h4 + h4 {
+        font-size: 24px !important;
+    }
+    
+    /* Linia 241 - Gwiazdki (trzeci h4 po liście ul - zostają na środku, tylko większe) */
+    ul[style*="padding-left: 20px;"] + h4 + h4 + h4 {
+        font-size: 24px !important;
+    }
+    
+    /* Linia 243 - Cytat "Nie zawsze było lekko" (h4 z marginesem 0%) */
+    h4[style*="margin-left: 0%;"] {
+        font-size: 24px !important;
+    }
+}
+
+

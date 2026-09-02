@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kilej.github.io/sitemap.xml
+
