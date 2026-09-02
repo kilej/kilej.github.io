@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kilej.github.io/sitemap.xml
+Sitemap: https://kilejofficial.web.app/sitemap.xml
 
