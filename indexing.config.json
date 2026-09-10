@@ -1,4 +1,16 @@
 {
 	"sitemap": "https://kilejofficial.web.app/sitemap.xml",
-	"credentials": "./klucz-google.json"
+"credentials": {
+  "type": "service_account",
+  "project_id": "kilejofficial-508209",
+  "private_key_id": "f1082142a535c90e0d895321aa97d212a61121e0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC723aFyNneaaiW\nVP5dVK+rvBKICSUVVUsMOKKmKMACOpNKPpAHZ81jk7PGWactC+E+cFX43lEgdBTr\noJTPcrtO4Xare9ddhGouJKExqi+BWW9dSnttmERkqmLiuY8R3iUJkNKM5NI978SD\nFGBrfr8fLRLzJ4cIa6Bs5ROVVq61VPHEgk/GdmpQTZRmvw7Ep8FWse2NxwfCNP5I\nKsywFLuyvKxzTNK3lu1abQzaqCaJ8C+CpYc6XKM8P/5oq2bqbD7HRAHyAO7kDEXt\nGu1t4AvFsTHmhU6g9OrqRBPUU4PVWvOjHbP+MMmWUOpozTrZf+ZOMFoIMc5VZn6D\noHAYSLE/AgMBAAECggEAQlRHEQ3N/34HDK2N8p5IOLb7RBUWhuXKzdHhfBG/Wgoc\nn4ZfjH3WQ2aPf2WAZaNgMI+xi2HT+0WBbYERif3UrRFmuT3M2TQ72XcNg1+3zlAp\nxiLaWeP9oh2XNL6YCZMKOMptzVmt8jiKhk3XjZz/Fp7vpfM69nop9skblQs6PMPZ\n6cYMHwSyd0oJAuQoZTa37DQJCM7cihJlVMmlgTzThB/OMaDbKEff40hP5YgbEgME\nzTmNzsdPVl8uNXPIEiHVDecUK4rbnL3ASdJNqH0PO9+QQLHhHj3PTYrsk+f75YpX\niQW8I+xEq8f2C+3RpqQp/De4yUY36WyylHNmm1D9wQKBgQDwGwTKHkFrbpM3brOh\n6E5szn8MCpDbyajpyeUoBVcgmVrSj735Qz0/eOiUsge5rWun3o/MERkW2p+n2BGb\nMiOUM0/4Pxb45HRwzVrPJ5gZHxEByqyBc5tFRXgaq7IxcMfX5uk05A45XoMrp6eG\nc3iMaeSq/p6VPGtugzamtJhlpwKBgQDISwMOB/XJbM7CmzwFsXprHNfLuyXT5fkU\ni+m/+6cHX8uWsqttgqePwR9cnQKoqsyV+d07RKTKq4tP1NwzpcPrDnyT6hAo+0kY\nnRa51cLto9nkQeFdyuaHjy1OF4rjWMdbxoB3B6IMQcDkSB5XX/2FKpgCCzkzWUXO\nAjSmZmR6qQKBgQCQaR+7VPEx5WKj73AZDDjHFnexTVWM68AtROIP7Q5XLAVFKXEw\nT3GyEE2KyXz9/0EFyUWhjhMR/NITyE/mkQR3KVmKzJ9LeVRTWB+rAnxnd5jqA/U3\nMsoLotm26NeXBucbguV2i0fG14J7Ki4HHsI9aZ8//T5yMdHHuSGQqIQUdwKBgG32\n6QVyD1p4F4g2jBygFRLrsfqTlDAjSb4jFsGlm01sJa1mCMJGAlLld590QHpz04Df\nvruEc2kmB4Vb202ry8WonXLkBd1KIRaXYFvE5ZFs7PrpxJ6nACwayofeWw14t3NG\np08ybKCIFSwAAFB+TgUnnm841D3B3JY/FcLp4m6JAoGBAI9KvC0g/gt+IoqlPeoZ\nozcOKMseChFFu2kZ3dng1K1DqiV9R53mf/1/lInyBtKy4ZIrvz3Pt0tm5LhBRGE8\n/FAxvheJi4agsuthslrbKOy9L9jn5rNCGcW4WKOE2jf8Ii3RRng7AWJdBH0CIevC\nsJBGJyVt9OrYSAXKHVHVu/tQ\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@kilejofficial-508209.iam.gserviceaccount.com",
+  "client_id": "114980128232490200311",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40kilejofficial-508209.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
 }
