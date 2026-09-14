@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const DOMAIN = "https://kilej.github.io/";
+const DOMAIN = "https://kilejofficial.web.app";
 const OUTPUT_SITEMAP = path.join(__dirname, "sitemap.xml");
 const OUTPUT_ROBOTS = path.join(__dirname, "robots.txt");
 const pages = ["/", "/index.html"];
