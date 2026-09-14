@@ -20,6 +20,6 @@ jobs:
           node-version: '20'
 
       - name: Uruchomienie bota indeksującego
-        run: npx google-indexing-script https://kilej.github.io/sitemap.xml
+        run: npx google-indexing-script https://kilejofficial.web.app/sitemap.xml
 
 
