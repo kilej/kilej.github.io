@@ -7,22 +7,22 @@ const OUTPUT_ROBOTS = path.join(__dirname, "robots.txt");
 
 const pages = ["/", "/index.html"];
 
-let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages
-  .map(
-    (page) => `  <url>
+	.map(
+		(page) => `  <url>
     <loc>${DOMAIN}${page === "/" ? "" : page}</loc>
     <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === "/" ? "1.0" : "0.8"}</priority>
-  </url>`
-  )
-  .join("\n")}
+  </url>`,
+	)
+	.join("\n")}
 </urlset>`;
 
 fs.writeFileSync(OUTPUT_SITEMAP, sitemapXml, "utf-8");
-console.log('🎉 Sukces: Wygenerowano plik sitemap.xml');
+console.log("🎉 Sukces: Wygenerowano plik sitemap.xml");
 
 const robotsTxt = `User-agent: *
 Allow: /
@@ -30,4 +30,4 @@ Allow: /
 Sitemap: ${DOMAIN}/sitemap.xml`;
 
 fs.writeFileSync(OUTPUT_ROBOTS, robotsTxt, "utf-8");
-console.log('🎉 Sukces: Zaktualizowano robots.txt ze wskazaniem mapy strony.');
+console.log("🎉 Sukces: Zaktualizowano robots.txt ze wskazaniem mapy strony.");
