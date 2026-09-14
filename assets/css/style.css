@@ -1,14 +1,11 @@
 @import url('https://googleapis.com');
 
-/* Styl dla nowego kontenera Spotify */
-.spotify-container-ramka {
-    flex: 0 0 350px;
-    height: 352px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    box-sizing: border-box;
+.spotify-widget-container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
 }
-
 
 body {
   background-image: url("../css/tlo.webp");
