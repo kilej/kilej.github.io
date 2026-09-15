@@ -302,6 +302,7 @@ display: none !important; } } </style>
     <h4 class="maly-tekst" style="color: #e5dfeb;">• Przesuń palcem w lewo, aby zobaczyć więcej  ─></h4>
     
 <style>
+<style>
 /* Styl dla kontenera, który wymusza układ w jednej linii i pozwala przewijać na telefonie /
 .slider {
 display: flex;
@@ -312,17 +313,16 @@ padding: 10px 0;
 -webkit-overflow-scrolling: touch; / Płynne przewijanie na iPhone */
 }
 
-/* Zapobiega zmniejszaniu się zdjęć i dba o równe przewijanie /
+/* Zapobiega zmniejszaniu się zdjęć i dba o równe przewijanie */
 .slider img {
 flex: 0 0 auto;
 scroll-snap-align: start;
 width: 100%;
-max-width: 250px; / Zachowane Twoje wymiary szerokości */
+max-width: 250px;
 
-/* KLUCZOWA ZMIANA: Zdjęcia stają się kwadratowe, a kadr skupia się na prawej stronie (twarzy) /
-aspect-ratio: 1 / 1; / Wymusza równe proporcje (kwadrat) /
-object-fit: cover; / Wypełnia cały obszar bez zniekształceń /
-object-position: right center; / Przesuwa kadr w prawo, żeby było widać całą twarz */
+/* KLUCZOWA ZMIANA: Stała wysokość rzędu, ale zdjęcie wyświetla się w 100% całe /
+height: 250px; / Stała wysokość dla wszystkich zdjęć (bez auto) /
+object-fit: contain; / Zdjęcie kurczy się tak, aby pokazać cały kadr i całą twarz */
 
 padding: 0.3px;
 background: linear-gradient(135deg, #141413 0%, #507bcc 50%, #5d728c 100%);
@@ -339,14 +339,16 @@ display: none;
 
 <div class="slider">
 <!-- Zdjęcie 1 -->
-<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp" alt="Raper Kiłej na zdjęciu, nie zawsze było lekko. Polski podziemny raper, zdjecie Kiłeja w Berlinie" title="Raper Kiłej, nie zawsze było lekko w życiu">
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Ki%C5%82ej%20w%20Berlinie%20po%20pracy.jpg" alt="Raper Kiłej na zdjęciu, nie zawsze było lekko. Polski podziemny raper, zdjecie Kiłeja w Berlinie" title="Raper Kiłej, nie zawsze było lekko w życiu">
 
 <!-- Zdjęcie 2 -->
-<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif" alt="Raper Kiłej, Gif Kiłeja, Życiówka" title="Raper Kiłej, nie zawsze było lekko w życiu">
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20foto.webp" alt="Raper Kiłej, Gif Kiłeja, Życiówka" title="Raper Kiłej, nie zawsze było lekko w życiu">
 
 <!-- Zdjęcie 3 -->
-<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Ki%C5%82ej%20w%20Berlinie%20po%20pracy.jpg" alt="Raper Kiłej w Berlinie" title="Raper Kiłej, właściwie Daniel Kilarski w Berlinie.">
+<img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif" alt="Raper Kiłej w Berlinie" title="Raper Kiłej, właściwie Daniel Kilarski w Berlinie.">
 </div>
+
+
 
 
 
