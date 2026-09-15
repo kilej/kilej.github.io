@@ -302,6 +302,29 @@ display: none !important; } } </style>
     <h4 class="maly-tekst" style="color: #e5dfeb;">• Przesuń palcem w lewo, aby zobaczyć więcej  ─></h4>
     
 
+<style>
+/* Styl dla kontenera, który wymusza układ w jednej linii i pozwala przewijać na telefonie */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px; /* Odstęp między zdjęciami */
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch; /* Płynne przewijanie na iPhone */
+}
+
+/* Ukrywa pasek przewijania */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styl dla zdjęć - wymusza równe przewijanie */
+.slider img {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+</style>
+
 <div class="slider">
   <!-- Zdjęcie 1 (Nowe) -->
   <img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Ki%C5%82ej%20w%20Berlinie%20po%20pracy.jpg" alt="Raper Kiłej na zdjęciu, nie zawsze było lekko. Polski podziemny raper, zdjecie Kiłeja w Berlinie" title="Raper Kiłej, nie zawsze było lekko w życiu" width="100%" style="max-width: 250px; height: auto; object-fit: contain; padding: 0.3px; background: linear-gradient(135deg, #141413 0%, #507bcc 50%, #5d728c 100%); border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); box-sizing: border-box;">
@@ -312,6 +335,7 @@ display: none !important; } } </style>
   <!-- Zdjęcie 3 -->
   <img src="https://raw.githubusercontent.com/kilej/kilej.github.io/refs/heads/main/Main%20img.gif" alt="Raper Kiłej, Gif Kiłeja, Życiówka " title="Raper Kiłej, nie zawsze było lekko w życiu" width="100%" style="max-width: 250px; height: auto; object-fit: contain; padding: 0.3px; background: linear-gradient(135deg, #141413 0%, #507bcc 50%, #5d728c 100%); border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); box-sizing: border-box;">
 </div>
+
 
 
 
