@@ -25,3 +25,14 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: kilejofficial
           channelId: live
+
+      - name: Konfiguracja Node.js (dla bota indeksującego)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Utworzenie pliku klucza Google
+        run: echo '${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}' > service_account.json
+
+      - name: Uruchomienie bota indeksującego Google
+        run: npx google-indexing-script https://kilejofficial.web.app/
