@@ -26,7 +26,7 @@ jobs:
           projectId: kilejofficial
           channelId: live
 
-      # --- KROKI INDEKSOWANIA GOOGLE ---
+            # --- KROKI INDEKSOWANIA GOOGLE ---
       
       - name: Konfiguracja Node.js (dla bota indeksującego)
         uses: actions/setup-node@v4
@@ -36,7 +36,5 @@ jobs:
       - name: Utworzenie pliku klucza Google
         run: echo '${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}' > service_account.json
 
-      - name: Uruchomienie bota indeksującego Google
-        run: npx google-indexing-script https://kilejofficial.web.app/
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: ./service_account.json
+      - name: Uruchomienie bota indeksującego Google z flagą ścieżki
+        run: npx google-indexing-script https://kilejofficial.web.app/ --path ./service_account.json
