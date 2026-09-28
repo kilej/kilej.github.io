@@ -36,6 +36,10 @@
 					{
 						"key": "Link",
 						"value": "<https://kilejofficial.web.app/>; rel=\"canonical\""
+					},
+					{
+						"key": "X-Google-Site-Verification",
+						"value": "Riux-LZIAMbmUqTDiPxavYFvw5bI9TIhMg0Vz12uPGc"
 					}
 				]
 			}
